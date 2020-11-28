@@ -1,0 +1,67 @@
+.map-filter-area {
+    display: flex;
+}
+
+.region-map {
+    border: 2px solid black;
+    width: 60%;
+    margin: 0 auto;
+}
+label.region-caption {
+    font-size: 0.8em;
+}
+
+.prefecture-area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.prefecture-area.selected {
+    border: 2px solid red;
+}
+.prefecture-map {
+    border: 2px solid gray;
+    padding: 8px 10px;
+    display: flex;
+}
+.prefecture-map.selected {
+    background-color: black;
+}
+label.prefecture-caption {
+    font-size: 0.7em;
+    color: gray;
+}
+
+.region-text-panel {
+    text-align: left;
+    width: 50%;
+}
+.region-full-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.region {
+    display: flex;
+    flex-direction: column;
+    min-width: 40%;
+    /* max-width: 50%; */
+}
+.region-title {
+    color: darkblue;
+}
+
+ul.prefecture-listing {
+    list-style-type: none;
+    padding-inline-start: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+li.prefecture-name.selected div{
+    background-color: rgb(94, 94, 94);
+    color: white;
+    width: fit-content;
+}
