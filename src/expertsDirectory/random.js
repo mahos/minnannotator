@@ -31,4 +31,7 @@ toDelete.forEach(trash => {
     delete languages[trash]
 })
 console.log('languages array cleaned: ', languages);
+
+const liststring = JSON.stringify(languages);
+console.log('stringified: ', liststring)
 export default languages

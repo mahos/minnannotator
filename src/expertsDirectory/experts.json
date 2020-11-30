@@ -12,9 +12,9 @@
         "website-lang": ["ja", "en"],
         "images": ["./images/temporary/tempimageA.jpg","./images/temporary/tempimageB.jpg"],
         "annotation-info": {
-            "annotation-lang": ["en", "ch"],
-            "annotators": [["User X", "2020-08-03T23;11:44GMT", "en"], ["User Y", "2020-08-08T03;51:42GMT", "ch"], ["User Z", "2020-11-03T19:09:22GMT", "en"]],
-            "history": [["User X", "2020-08-03T23;11:44GMT", "annotated"], ["User Y", "2020-08-08T03;51:42GMT", "annotated"], ["User Z", "2020-11-03T19:09:22GMT", "voted up"], ["User B", "2020-11-09T07:03:11GMT", "voted down annotation"], ["User A", "2020-11-04T09:09:22GMT", "voted up annotation"]],
+            "annotation-lang": ["en", "zho"],
+            "annotators": [["User X", "2020-08-03T23:11:44Z", "en"], ["User Y", "2020-08-08T03;51:42Z", "zho"], ["User Z", "2020-11-03T19:09:22Z", "en"]],
+            "history": [["User X", "2020-08-03T23:11:44Z", "annotated"], ["User Y", "2020-08-08T03;51:42Z", "annotated"], ["User Z", "2020-11-03T19:09:22Z", "voted up"], ["User B", "2020-11-09T07:03:11Z", "voted down annotation"], ["User A", "2020-11-04T09:09:22Z", "voted up annotation"]],
             "screenshots": [{
                     "title": "Annotation main page",
                     "description": "Top page in Japanese",
@@ -44,9 +44,9 @@
         "website-lang": ["ja", "en"],
         "images": ["./images/temporary/tempimageA.jpg","./images/temporary/tempimageB.jpg"],
         "annotation-info": {
-            "annotation-lang": ["en", "ch"],
-            "annotators": [["User X", "2020-08-03T23;11:44GMT", "en"], ["User Y", "2020-08-08T03;51:42GMT", "ch"], ["User Z", "2020-11-03T19:09:22GMT", "en"]],
-            "history": [["User X", "2020-08-03T23;11:44GMT", "annotated"], ["User Y", "2020-08-08T03;51:42GMT", "annotated"], ["User Z", "2020-11-03T19:09:22GMT", "voted up"], ["User B", "2020-11-09T07:03:11GMT", "voted down annotation"], ["User A", "2020-11-04T09:09:22GMT", "voted up annotation"]],
+            "annotation-lang": ["en", "zho", "os", "fj", "vi"],
+            "annotators": [["User X", "2020-08-03T23:11:44Z", "en"], ["User Y", "2020-08-08T03;51:42Z", "zho"], ["User Z", "2020-11-03T19:09:22Z", "en"]],
+            "history": [["User X", "2020-08-03T23:11:44Z", "annotated"], ["User Y", "2020-08-08T03;51:42Z", "annotated"], ["User Z", "2020-11-03T19:09:22Z", "voted up"], ["User B", "2020-11-09T07:03:11Z", "voted down annotation"], ["User A", "2020-11-04T09:09:22Z", "voted up annotation"]],
             "screenshots": [{
                     "title": "Annotation main page",
                     "description": "Top page in Japanese",
@@ -77,9 +77,9 @@
         "website-lang": ["ja"],
         "images": ["./images/temporary/tempimageA.jpg","./images/temporary/tempimageB.jpg"],
         "annotation-info": {
-            "annotation-lang": ["en", "ch"],
-            "annotators": [["User X", "2020-08-03T23;11:44GMT", "en"], ["User Y", "2020-08-08T03;51:42GMT", "ch"], ["User Z", "2020-11-03T19:09:22GMT", "en"]],
-            "history": [["User X", "2020-08-03T23;11:44GMT", "annotated"], ["User Y", "2020-08-08T03;51:42GMT", "annotated"], ["User Z", "2020-11-03T19:09:22GMT", "voted up"], ["User B", "2020-11-09T07:03:11GMT", "voted down annotation"], ["User A", "2020-11-04T09:09:22GMT", "voted up annotation"]],
+            "annotation-lang": ["en", "zho"],
+            "annotators": [["User X", "2020-08-03T23:11:44Z", "en"], ["User Y", "2020-08-08T03;51:42Z", "zho"], ["User Z", "2020-11-03T19:09:22Z", "en"]],
+            "history": [["User X", "2020-08-03T23:11:44Z", "annotated"], ["User Y", "2020-08-08T03;51:42Z", "annotated"], ["User Z", "2020-11-03T19:09:22Z", "voted up"], ["User B", "2020-11-09T07:03:11Z", "voted down annotation"], ["User A", "2020-11-04T09:09:22Z", "voted up annotation"]],
             "screenshots": [{
                     "title": "Annotation main page",
                     "description": "Top page in Japanese",

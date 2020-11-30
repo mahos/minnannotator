@@ -1,0 +1,692 @@
+{
+    "ab": {
+        "langName": "Abkhazian",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Flag_of_the_Republic_of_Abkhazia.svg/46px-Flag_of_the_Republic_of_Abkhazia.svg.png",
+        "flagEmoji": false
+    },
+    "af": {
+        "langName": "Afrikaans",
+        "flag": "🇿🇦",
+        "flagEmoji": true
+    },
+    "am": {
+        "langName": "Amharic",
+        "flag": "🇪🇹",
+        "flagEmoji": true
+    },
+    "ar": {
+        "langName": "Arabic",
+        "flag": "🇸🇦",
+        "flagEmoji": true
+    },
+    "as": {
+        "langName": "Assamese",
+        "flag": "🇮🇳",
+        "flagEmoji": true
+    },
+    "ay": {
+        "langName": "Aymara",
+        "flag": "🇵🇪🇧🇴",
+        "flagEmoji": true
+    },
+    "az": {
+        "langName": "Azerbaijani",
+        "flag": "🇦🇿",
+        "flagEmoji": true
+    },
+    "be": {
+        "langName": "Belarusian",
+        "flag": "🇧🇾",
+        "flagEmoji": true
+    },
+    "bg": {
+        "langName": "Bulgarian",
+        "flag": "🇧🇬",
+        "flagEmoji": true
+    },
+    "bi": {
+        "langName": "Bislama",
+        "flag": "🇻🇺",
+        "flagEmoji": true
+    },
+    "bn": {
+        "langName": "Bengali",
+        "flag": "🇧🇩",
+        "flagEmoji": true
+    },
+    "bs": {
+        "langName": "Bosnian",
+        "flag": "🇧🇦",
+        "flagEmoji": true
+    },
+    "ca": {
+        "langName": "Catalan; Valencian",
+        "flag": "🇦🇩",
+        "flagEmoji": true
+    },
+    "cs": {
+        "langName": "Czech",
+        "flag": "🇨🇿",
+        "flagEmoji": true
+    },
+    "da": {
+        "langName": "Danish",
+        "flag": "🇩🇰",
+        "flagEmoji": true
+    },
+    "de": {
+        "langName": "German",
+        "flag": "🇩🇪",
+        "flagEmoji": true
+    },
+    "dv": {
+        "langName": "Divehi; Dhivehi; Maldivian",
+        "flag": "🇲🇻",
+        "flagEmoji": true
+    },
+    "dz": {
+        "langName": "Dzongkha",
+        "flag": "🇧🇹",
+        "flagEmoji": true
+    },
+    "ee": {
+        "langName": "Ewe",
+        "flag": "🇬🇭",
+        "flagEmoji": true
+    },
+    "el": {
+        "langName": "Greek",
+        "flag": "🇬🇷",
+        "flagEmoji": true
+    },
+    "en": {
+        "langName": "English",
+        "flag": "🇬🇧🇺🇸",
+        "flagEmoji": true
+    },
+    "es": {
+        "langName": "Spanish; Castilian",
+        "flag": "🇧🇴",
+        "flagEmoji": true
+    },
+    "et": {
+        "langName": "Estonian",
+        "flag": "🇪🇪",
+        "flagEmoji": true
+    },
+    "fa": {
+        "langName": "Persian",
+        "flag": "🇮🇷",
+        "flagEmoji": true
+    },
+    "fi": {
+        "langName": "Finnish",
+        "flag": "🇫🇮",
+        "flagEmoji": true
+    },
+    "fj": {
+        "langName": "Fijian",
+        "flag": "🇫🇯",
+        "flagEmoji": true
+    },
+    "fo": {
+        "langName": "Faroese",
+        "flag": "🇩🇰",
+        "flagEmoji": true
+    },
+    "fr": {
+        "langName": "French",
+        "flag": "🇫🇷",
+        "flagEmoji": true
+    },
+    "ga": {
+        "langName": "Irish",
+        "flag": "🇮🇪",
+        "flagEmoji": true
+    },
+    "gd": {
+        "langName": "Gaelic; Scottish Gaelic",
+        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "flagEmoji": true
+    },
+    "gn": {
+        "langName": "Guarani",
+        "flag": "🇵🇾",
+        "flagEmoji": true
+    },
+    "gu": {
+        "langName": "Gujarati",
+        "flag": "🇮🇳",
+        "flagEmoji": true
+    },
+    "ha": {
+        "langName": "Hausa",
+        "flag": "🇳🇪🇳🇬",
+        "flagEmoji": true
+    },
+    "he": {
+        "langName": "Hebrew",
+        "flag": "🇮🇱",
+        "flagEmoji": true
+    },
+    "hi": {
+        "langName": "Hindi",
+        "flag": "🇮🇳",
+        "flagEmoji": true
+    },
+    "ho": {
+        "langName": "Hiri Motu",
+        "flag": "🇵🇬",
+        "flagEmoji": true
+    },
+    "hr": {
+        "langName": "Croatian",
+        "flag": "🇭🇷",
+        "flagEmoji": true
+    },
+    "ht": {
+        "langName": "Haitian; Haitian Creole",
+        "flag": "🇭🇹",
+        "flagEmoji": true
+    },
+    "hu": {
+        "langName": "Hungarian",
+        "flag": "🇭🇺",
+        "flagEmoji": true
+    },
+    "hy": {
+        "langName": "Armenian",
+        "flag": "🇦🇲",
+        "flagEmoji": true
+    },
+    "id": {
+        "langName": "Indonesian",
+        "flag": "🇮🇩",
+        "flagEmoji": true
+    },
+    "ig": {
+        "langName": "Igbo",
+        "flag": "🇳🇬",
+        "flagEmoji": true
+    },
+    "is": {
+        "langName": "Icelandic",
+        "flag": "🇮🇸",
+        "flagEmoji": true
+    },
+    "it": {
+        "langName": "Italian",
+        "flag": "🇮🇹",
+        "flagEmoji": true
+    },
+    "ja": {
+        "langName": "Japanese",
+        "flag": "🇯🇵",
+        "flagEmoji": true
+    },
+    "jv": {
+        "langName": "Javanese",
+        "flag": "🇮🇩",
+        "flagEmoji": true
+    },
+    "ka": {
+        "langName": "Georgian",
+        "flag": "🇬🇪",
+        "flagEmoji": true
+    },
+    "kg": {
+        "langName": "Kongo",
+        "flag": "🇨🇩",
+        "flagEmoji": true
+    },
+    "kj": {
+        "langName": "Kuanyama; Kwanyama",
+        "flag": "🇦🇴",
+        "flagEmoji": true
+    },
+    "kk": {
+        "langName": "Kazakh",
+        "flag": "🇰🇿",
+        "flagEmoji": true
+    },
+    "kl": {
+        "langName": "Kalaallisut; Greenlandic",
+        "flag": "🇬🇮",
+        "flagEmoji": true
+    },
+    "km": {
+        "langName": "Central Khmer",
+        "flag": "🇰🇭",
+        "flagEmoji": true
+    },
+    "kn": {
+        "langName": "Kannada",
+        "flag": "🇮🇳",
+        "flagEmoji": true
+    },
+    "ko": {
+        "langName": "Korean",
+        "flag": "🇰🇷",
+        "flagEmoji": true
+    },
+    "kr": {
+        "langName": "Kanuri",
+        "flag": "🇳🇪",
+        "flagEmoji": true
+    },
+    "ku": {
+        "langName": "Kurdish",
+        "flag": "🇸🇾",
+        "flagEmoji": true
+    },
+    "ky": {
+        "langName": "Kirghiz; Kyrgyz",
+        "flag": "🇰🇬",
+        "flagEmoji": true
+    },
+    "lb": {
+        "langName": "Luxembourgish; Letzeburgesch",
+        "flag": "🇱🇺",
+        "flagEmoji": true
+    },
+    "li": {
+        "langName": "Limburgan; Limburger; Limburgish",
+        "flag": "🇳🇱",
+        "flagEmoji": true
+    },
+    "ln": {
+        "langName": "Lingala",
+        "flag": "🇨🇩",
+        "flagEmoji": true
+    },
+    "lo": {
+        "langName": "Lao",
+        "flag": "🇱🇦",
+        "flagEmoji": true
+    },
+    "lt": {
+        "langName": "Lithuanian",
+        "flag": "🇱🇹",
+        "flagEmoji": true
+    },
+    "lv": {
+        "langName": "Latvian",
+        "flag": "🇱🇻",
+        "flagEmoji": true
+    },
+    "mg": {
+        "langName": "Malagasy",
+        "flag": "🇲🇬",
+        "flagEmoji": true
+    },
+    "mh": {
+        "langName": "Marshallese",
+        "flag": "🇲🇭",
+        "flagEmoji": true
+    },
+    "mi": {
+        "langName": "Maori",
+        "flag": "🇳🇿",
+        "flagEmoji": true
+    },
+    "mk": {
+        "langName": "Macedonian",
+        "flag": "🇲🇰",
+        "flagEmoji": true
+    },
+    "ml": {
+        "langName": "Malayalam",
+        "flag": "🇮🇳",
+        "flagEmoji": true
+    },
+    "mn": {
+        "langName": "Mongolian",
+        "flag": "🇲🇳",
+        "flagEmoji": true
+    },
+    "mr": {
+        "langName": "Marathi",
+        "flag": "🇮🇳",
+        "flagEmoji": true
+    },
+    "ms": {
+        "langName": "Malay",
+        "flag": "🇲🇾",
+        "flagEmoji": true
+    },
+    "mt": {
+        "langName": "Maltese",
+        "flag": "🇲🇹",
+        "flagEmoji": true
+    },
+    "my": {
+        "langName": "Burmese",
+        "flag": "🇲🇲",
+        "flagEmoji": true
+    },
+    "na": {
+        "langName": "Nauru",
+        "flag": "🇳🇷",
+        "flagEmoji": true
+    },
+    "nb": {
+        "langName": "Bokmål, Norwegian; Norwegian Bokmål",
+        "flag": "🇳🇴",
+        "flagEmoji": true
+    },
+    "nd": {
+        "langName": "Ndebele, North; North Ndebele",
+        "flag": "🇿🇼",
+        "flagEmoji": true
+    },
+    "ne": {
+        "langName": "Nepali",
+        "flag": "🇳🇵",
+        "flagEmoji": true
+    },
+    "nl": {
+        "langName": "Dutch; Flemish",
+        "flag": "🇧🇪",
+        "flagEmoji": true
+    },
+    "nn": {
+        "langName": "Norwegian Nynorsk; Nynorsk, Norwegian",
+        "flag": "🇳🇴",
+        "flagEmoji": true
+    },
+    "no": {
+        "langName": "Norwegian",
+        "flag": "🇳🇴",
+        "flagEmoji": true
+    },
+    "nr": {
+        "langName": "Ndebele, South; South Ndebele",
+        "flag": "🇿🇦",
+        "flagEmoji": true
+    },
+    "ny": {
+        "langName": "Chichewa; Chewa; Nyanja",
+        "flag": "🇲🇼",
+        "flagEmoji": true
+    },
+    "om": {
+        "langName": "Oromo",
+        "flag": "🇪🇹",
+        "flagEmoji": true
+    },
+    "or": {
+        "langName": "Odia",
+        "flag": "🇮🇳",
+        "flagEmoji": true
+    },
+    "os": {
+        "langName": "Ossetian; Ossetic",
+        "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_South_Ossetia.svg/46px-Flag_of_South_Ossetia.svg.png",
+        "flagEmoji": false
+    },
+    "pa": {
+        "langName": "Panjabi; Punjabi",
+        "flag": "🇮🇳🇵🇰",
+        "flagEmoji": true
+    },
+    "pl": {
+        "langName": "Polish",
+        "flag": "🇵🇱",
+        "flagEmoji": true
+    },
+    "ps": {
+        "langName": "Pushto; Pashto",
+        "flag": "🇦🇫",
+        "flagEmoji": true
+    },
+    "pt": {
+        "langName": "Portuguese",
+        "flag": "🇵🇹",
+        "flagEmoji": true
+    },
+    "qu": {
+        "langName": "Quechua",
+        "flag": "🇪🇨",
+        "flagEmoji": true
+    },
+    "rm": {
+        "langName": "Romansh",
+        "flag": "🇨🇭",
+        "flagEmoji": true
+    },
+    "rn": {
+        "langName": "Rundi",
+        "flag": "🇧🇮",
+        "flagEmoji": true
+    },
+    "ro": {
+        "langName": "Romanian; Moldavian; Moldovan",
+        "flag": "🇲🇩",
+        "flagEmoji": true
+    },
+    "ru": {
+        "langName": "Russian",
+        "flag": "🇷🇺",
+        "flagEmoji": true
+    },
+    "rw": {
+        "langName": "Kinyarwanda",
+        "flag": "🇷🇼",
+        "flagEmoji": true
+    },
+    "sd": {
+        "langName": "Sindhi",
+        "flag": "🇵🇰",
+        "flagEmoji": true
+    },
+    "se": {
+        "langName": "Northern Sami",
+        "flag": "🇳🇴",
+        "flagEmoji": true
+    },
+    "sg": {
+        "langName": "Sango",
+        "flag": "🇨🇫",
+        "flagEmoji": true
+    },
+    "si": {
+        "langName": "Sinhala; Sinhalese",
+        "flag": "🇱🇰",
+        "flagEmoji": true
+    },
+    "sk": {
+        "langName": "Slovak",
+        "flag": "🇸🇰",
+        "flagEmoji": true
+    },
+    "sl": {
+        "langName": "Slovenian",
+        "flag": "🇸🇮",
+        "flagEmoji": true
+    },
+    "sm": {
+        "langName": "Samoan",
+        "flag": "🇼🇸",
+        "flagEmoji": true
+    },
+    "sn": {
+        "langName": "Shona",
+        "flag": "🇿🇼",
+        "flagEmoji": true
+    },
+    "so": {
+        "langName": "Somali",
+        "flag": "🇸🇴",
+        "flagEmoji": true
+    },
+    "sq": {
+        "langName": "Albanian",
+        "flag": "🇦🇱",
+        "flagEmoji": true
+    },
+    "sr": {
+        "langName": "Serbian",
+        "flag": "🇷🇸",
+        "flagEmoji": true
+    },
+    "ss": {
+        "langName": "Swati",
+        "flag": "🇸🇿",
+        "flagEmoji": true
+    },
+    "st": {
+        "langName": "Sotho, Southern",
+        "flag": "🇱🇸",
+        "flagEmoji": true
+    },
+    "su": {
+        "langName": "Sundanese",
+        "flag": "🇮🇩",
+        "flagEmoji": true
+    },
+    "sv": {
+        "langName": "Swedish",
+        "flag": "🇸🇪",
+        "flagEmoji": true
+    },
+    "sw": {
+        "langName": "Swahili",
+        "flag": "🇹🇿🇰🇪",
+        "flagEmoji": true
+    },
+    "ta": {
+        "langName": "Tamil",
+        "flag": "🇱🇰",
+        "flagEmoji": true
+    },
+    "te": {
+        "langName": "Telugu",
+        "flag": "🇮🇳",
+        "flagEmoji": true
+    },
+    "tg": {
+        "langName": "Tajik",
+        "flag": "🇹🇯",
+        "flagEmoji": true
+    },
+    "th": {
+        "langName": "Thai",
+        "flag": "🇹🇭",
+        "flagEmoji": true
+    },
+    "ti": {
+        "langName": "Tigrinya",
+        "flag": "🇪🇷",
+        "flagEmoji": true
+    },
+    "tk": {
+        "langName": "Turkmen",
+        "flag": "🇹🇲",
+        "flagEmoji": true
+    },
+    "tl": {
+        "langName": "Tagalog",
+        "flag": "🇵🇭",
+        "flagEmoji": true
+    },
+    "tn": {
+        "langName": "Tswana",
+        "flag": "🇧🇼",
+        "flagEmoji": true
+    },
+    "to": {
+        "langName": "Tonga (Tonga Islands)",
+        "flag": "🇹🇴",
+        "flagEmoji": true
+    },
+    "tr": {
+        "langName": "Turkish",
+        "flag": "🇹🇷",
+        "flagEmoji": true
+    },
+    "ts": {
+        "langName": "Tsonga",
+        "flag": "🇿🇦",
+        "flagEmoji": true
+    },
+    "tt": {
+        "langName": "Tatar",
+        "flag": "🇵🇱",
+        "flagEmoji": true
+    },
+    "tw": {
+        "langName": "Twi",
+        "flag": "🇦🇫",
+        "flagEmoji": true
+    },
+    "ty": {
+        "langName": "Tahitian",
+        "flag": "🇵🇫",
+        "flagEmoji": true
+    },
+    "ug": {
+        "langName": "Uighur; Uyghur",
+        "flag": "🇨🇳🇰🇿",
+        "flagEmoji": true
+    },
+    "uk": {
+        "langName": "Ukrainian",
+        "flag": "🇺🇦",
+        "flagEmoji": true
+    },
+    "ur": {
+        "langName": "Urdu",
+        "flag": "🇵🇰",
+        "flagEmoji": true
+    },
+    "uz": {
+        "langName": "Uzbek",
+        "flag": "🇺🇿",
+        "flagEmoji": true
+    },
+    "ve": {
+        "langName": "Venda",
+        "flag": "🇿🇦🇿🇼",
+        "flagEmoji": true
+    },
+    "vi": {
+        "langName": "Vietnamese",
+        "flag": "🇻🇳",
+        "flagEmoji": true
+    },
+    "wo": {
+        "langName": "Wolof",
+        "flag": "🇲🇷",
+        "flagEmoji": true
+    },
+    "xh": {
+        "langName": "Xhosa",
+        "flag": "🇿🇦🇿🇼",
+        "flagEmoji": true
+    },
+    "yi": {
+        "langName": "Yiddish",
+        "flag": "🇵🇱",
+        "flagEmoji": true
+    },
+    "yo": {
+        "langName": "Yoruba",
+        "flag": "🇳🇬",
+        "flagEmoji": true
+    },
+    "zu": {
+        "langName": "Zulu",
+        "flag": "🇿🇦",
+        "flagEmoji": true
+    },
+    "zho": {
+        "langName": "Chinese (Mandarin)",
+        "flag": "🇨🇳",
+        "flagEmoji": true
+    },
+    "yue": {
+        "langName": "Chinese (Cantonese)",
+        "flag": "🇨🇳",
+        "flagEmoji": true
+    }
+}
