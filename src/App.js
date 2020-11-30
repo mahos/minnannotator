@@ -2,12 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import MapFilter from './expertsDirectory/mapFilter';
+import ExpertsDirectory from './expertsDirectory/expertsDirectory';
 
 function App() {
   return (
     <div className="App">
-      <MapFilter />
-      <header className="App-header">
+      <ExpertsDirectory />
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -21,7 +22,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }

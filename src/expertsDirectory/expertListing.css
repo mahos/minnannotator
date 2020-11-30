@@ -1,0 +1,11 @@
+.filter-result-content {
+    padding: 28px 3%;
+    border: 1px solid red;
+    width: 100%;
+}
+
+.result-stat-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}

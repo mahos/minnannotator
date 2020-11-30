@@ -1,0 +1,99 @@
+[
+    {
+        "name": "xxxx law office",
+        "tags": ["law firm", "multi-lingual", "free consultation", "online consultation"],
+        "locations": ["Hokkaido", "Osaka", "Tokyo", "Online"],
+        "website": "xxxx-law-office.com",
+        "reviewed": true,
+        "votes": 72,
+        "id": "000001",
+        "phone": "000-111-2222",
+        "fax": "111-222-3333",
+        "website-lang": ["ja", "en"],
+        "images": ["./images/temporary/tempimageA.jpg","./images/temporary/tempimageB.jpg"],
+        "annotation-info": {
+            "annotation-lang": ["en", "ch"],
+            "annotators": [["User X", "2020-08-03T23;11:44GMT", "en"], ["User Y", "2020-08-08T03;51:42GMT", "ch"], ["User Z", "2020-11-03T19:09:22GMT", "en"]],
+            "history": [["User X", "2020-08-03T23;11:44GMT", "annotated"], ["User Y", "2020-08-08T03;51:42GMT", "annotated"], ["User Z", "2020-11-03T19:09:22GMT", "voted up"], ["User B", "2020-11-09T07:03:11GMT", "voted down annotation"], ["User A", "2020-11-04T09:09:22GMT", "voted up annotation"]],
+            "screenshots": [{
+                    "title": "Annotation main page",
+                    "description": "Top page in Japanese",
+                    "annotations": [],
+                    "edit-history": [],
+                    "image-url": "./images/temporary/tempscreenimageA.jpg"
+                },{
+                    "title": "Annotation about us page",
+                    "description": "about us in Japanese",
+                    "annotations": [],
+                    "edit-history": [],
+                    "image-url": "./images/temporary/tempscreenimageB.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "name": "ABC law office",
+        "tags": ["law firm", "free consultation", "online consultation"],
+        "locations": ["Hokkaido", "Osaka", "Tokyo", "Fukuoka", "Online"],
+        "website": "ABC-law.jp",
+        "reviewed": true,
+        "votes": 122,
+        "id": "000002",
+        "phone": "000-111-2222",
+        "fax": "111-222-3333",
+        "website-lang": ["ja", "en"],
+        "images": ["./images/temporary/tempimageA.jpg","./images/temporary/tempimageB.jpg"],
+        "annotation-info": {
+            "annotation-lang": ["en", "ch"],
+            "annotators": [["User X", "2020-08-03T23;11:44GMT", "en"], ["User Y", "2020-08-08T03;51:42GMT", "ch"], ["User Z", "2020-11-03T19:09:22GMT", "en"]],
+            "history": [["User X", "2020-08-03T23;11:44GMT", "annotated"], ["User Y", "2020-08-08T03;51:42GMT", "annotated"], ["User Z", "2020-11-03T19:09:22GMT", "voted up"], ["User B", "2020-11-09T07:03:11GMT", "voted down annotation"], ["User A", "2020-11-04T09:09:22GMT", "voted up annotation"]],
+            "screenshots": [{
+                    "title": "Annotation main page",
+                    "description": "Top page in Japanese",
+                    "annotations": [],
+                    "edit-history": [],
+                    "image-url": "./images/temporary/tempscreenimageA.jpg"
+                },{
+                    "title": "Annotation about us page",
+                    "description": "about us in Japanese",
+                    "annotations": [],
+                    "edit-history": [],
+                    "image-url": "./images/temporary/tempscreenimageB.jpg"
+                }
+            ]
+        }
+    },
+    {
+        "name": "law office 2",
+        "tags": ["law firm", "multi-lingual", "online consultation"],
+        "locations": ["Miyazaki", "Kagawa", "Gifu", "Online"],
+        "website": "law-office2.com",
+        
+        "reviewed": true,
+        "votes": 32,
+        "id": "000003",
+        "phone": "000-111-2222",
+        "fax": "111-222-3333",
+        "website-lang": ["ja"],
+        "images": ["./images/temporary/tempimageA.jpg","./images/temporary/tempimageB.jpg"],
+        "annotation-info": {
+            "annotation-lang": ["en", "ch"],
+            "annotators": [["User X", "2020-08-03T23;11:44GMT", "en"], ["User Y", "2020-08-08T03;51:42GMT", "ch"], ["User Z", "2020-11-03T19:09:22GMT", "en"]],
+            "history": [["User X", "2020-08-03T23;11:44GMT", "annotated"], ["User Y", "2020-08-08T03;51:42GMT", "annotated"], ["User Z", "2020-11-03T19:09:22GMT", "voted up"], ["User B", "2020-11-09T07:03:11GMT", "voted down annotation"], ["User A", "2020-11-04T09:09:22GMT", "voted up annotation"]],
+            "screenshots": [{
+                    "title": "Annotation main page",
+                    "description": "Top page in Japanese",
+                    "annotations": [],
+                    "edit-history": [],
+                    "image-url": "./images/temporary/tempscreenimageA.jpg"
+                },{
+                    "title": "Annotation about us page",
+                    "description": "about us in Japanese",
+                    "annotations": [],
+                    "edit-history": [],
+                    "image-url": "./images/temporary/tempscreenimageB.jpg"
+                }
+            ]
+        }
+    }
+]

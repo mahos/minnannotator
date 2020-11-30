@@ -1,0 +1,17 @@
+.form-action-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+button.secondary {
+    margin-left: 16px;
+}
+
+.checkgroup {
+    margin-left: 12%;
+}
+
+ul.checklist {
+    text-align: left;
+    padding-inline-start: 0;
+}
