@@ -1,6 +1,12 @@
+.detail-form {
+    padding-left: 8%;
+}
+
 .form-action-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0 auto;
 }
 
 button.secondary {
@@ -8,10 +14,15 @@ button.secondary {
 }
 
 .checkgroup {
-    margin-left: 12%;
+    width: 100%;
+    margin: 0 auto;
 }
-
 ul.checklist {
     text-align: left;
     padding-inline-start: 0;
+    
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
 }

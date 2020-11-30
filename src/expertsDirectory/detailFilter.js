@@ -22,7 +22,7 @@ class FilterForm extends React.Component {
     }
     render () {
         const checkFields = {
-            friendliness: {
+            'Non-Japanese Friendliness': {
                 'Community reviewed': false,
                 'Has website' : false,
                 'Multi-lingual': false,
@@ -31,19 +31,19 @@ class FilterForm extends React.Component {
                 'Translator available': false,
                 'Online consultation available': false
             },
-            serviceType: {
+            'Legal Service / Type': {
                 'Attorney': false,
                 'Judicial Scrivener' : false,
                 'Patent Agent': false,
                 'Administrative Scrivener': false
             },
-            practiceArea: {
+            'Practice Areas': {
                 'Arbitration and Mediation': false,
                 'Asset Finance Law': false,
                 'Banking and Finance': false,
                 'Capital Markets': false,
                 'Constructions Law': false,
-                'Corportate Compliance': false,
+                'Corporate Compliance': false,
                 'Criminal Defense': false,
                 'Entertainment Law': false,
                 'Insurance Law': false,
@@ -57,7 +57,7 @@ class FilterForm extends React.Component {
                 'Technology': false,
                 'Venture Capital Law': false
             },
-            source:  {
+            'Result Source':  {
                 'sumline.jp': false,
                 'HG.org': false,
                 'bengoshikai.jp/himawari search': false,
