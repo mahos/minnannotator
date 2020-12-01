@@ -8,8 +8,10 @@ import { ReactComponent as VoteIcon} from '../images/icons/vote-counter.svg';
 import { ReactComponent as DictionaryIcon} from '../images/icons/dictionary.svg';
 import { ReactComponent as BookmarkIcon} from '../images/icons/bookmark.svg';
 import { ReactComponent as CommentIcon} from '../images/icons/comment.svg';
+import { ReactComponent as CommentsIcon} from '../images/icons/comments.svg';
 import { ReactComponent as AnnotateIcon} from '../images/icons/annotate.svg';
 import { ReactComponent as LangToggleIcon} from '../images/icons/lang-toggle.svg';
+
 
 const langFlagData = require('../expertsDirectory/langFlagByCode.json');
 const resourceData = require('./resources.json');
@@ -81,8 +83,10 @@ class HomeContent extends React.Component {
                 </div>
                 <div className="ranking-panels-area">
                     <div className="top-resource-panel panel">
-                        <h2 className="panel-title">Top Resources</h2>
-                        <ToggleLang lang="en"/>
+                        <div className="panel-head">
+                            <h2 className="panel-title">Top Resources</h2>
+                            <ToggleLang className="toggler" lang="en"/>
+                        </div>
                         <div className="resource-list">
                             {resourceData.slice(0,3).map((resource, index) => {
                                 return (<div className="resource-card">
@@ -106,27 +110,34 @@ class HomeContent extends React.Component {
                                 </div>)
                             })}
                         </div>
-                        <a href="#">More</a>
+                        <a className="more-link" href="#">More</a>
                     </div>
                     <div className="forum-topic-panel panel">
-                        <h2 className="panel-title">Hot Forum Topic</h2>
+                        <div className="panel-head">
+                            <h2 className="panel-title">Hot Forum Topic</h2>
+                        </div>
                         <div className="topic-list">
                             {forumTopicData.slice(0,3).map((topic, index) => {
                                 return (<div className="topic-card">
+                                    <div className="topic-rank">{index + 1}</div>
                                     <div className="topic-info">
-                                        <h3><div>{index + 1}</div>{topic['title']}</h3>
+                                        <h3>{topic['title']}</h3>
                                         <h6>Posted by {topic['opener']} {convertMilliSec(new Date() - new Date(topic['timestamp']))} ago</h6>
                                     </div>
                                     <div className="interest-zone">
                                         <div className="bookmarks">
-                                            <CaretUp className="bookmark-icon"/>
-                                            <div className="bookmark-count">{topic['bookmarks']}</div>
-                                            <figcaption className="tiny-caption">Bookmarked</figcaption>
+                                            <BookmarkIcon className="bookmark-icon icon"/>
+                                            <div class="interest-stat">
+                                                <div className="bookmark-count count">{topic['bookmarks']}</div>
+                                                <figcaption className="tiny-caption">Bookmarked</figcaption>
+                                            </div>
                                         </div>
                                         <div className="comments">
-                                            <CaretUp className="comments-icon"/>
-                                            <div className="comment-count">{topic['comments']}</div>
-                                            <figcaption className="tiny-caption">Comments</figcaption>
+                                            <CommentsIcon className="comments-icon icon"/>
+                                            <div class="interest-stat">
+                                                <div className="comment-count count">{topic['comments']}</div>
+                                                <figcaption className="tiny-caption">Comments</figcaption>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>)
@@ -137,7 +148,9 @@ class HomeContent extends React.Component {
                     <div className="recently-annotated-panel panel">
                         <h2 className="panel-title">Recently Annotated</h2>
                         <div className="annotated-card">
-                            <img src={placeholderImage} />
+                            <div className="card-image-container">
+                                <img src={placeholderImage} />
+                            </div>
                             <div className="basic-info">
                                 <h3>{annotated['website']}</h3>
                                 <div className="practice-tags">
@@ -148,6 +161,7 @@ class HomeContent extends React.Component {
                                 <h6>Annotation by {annotated['annotation-info']['annotators'][annotated['annotation-info']['annotators'].length - 1][0]} {langFlagData[annotated['annotation-info']['annotators'][annotated['annotation-info']['annotators'].length - 1][2]]['flagEmoji'] ? langFlagData[annotated['annotation-info']['annotators'][annotated['annotation-info']['annotators'].length - 1][2]]['flag'] : ''}</h6>
                             </div>
                             <div className="annotation-lang">
+                                <h6>Annotation in</h6>
                                 {annotated['annotation-info']['annotation-lang'].slice(0,3).map(lang => {
                                     if (langFlagData[lang]['flagEmoji']) {
                                         return <div>{langFlagData[lang]['flag']}</div>
@@ -161,26 +175,30 @@ class HomeContent extends React.Component {
                         <a href="#">More</a>
                     </div>
                     <div className="popular-keywords-panel panel">
-                        <h2 className="panel-title">Popular Keywords</h2>
-                        <ToggleLang lang="en"/>
+                        <div className="panel-head">
+                            <h2 className="panel-title">Popular Keywords</h2>
+                            <ToggleLang lang="en"/>
+                        </div>
+                        <div className="keywords">
                         {keywordsData.slice(0,3).map(word => {
                             console.log('Word: ', word);
                             return (<div className="word-zone">
                                 <h6 className="rubi">{word['rubi']}</h6>
                                 <h3>{word['japanese']}</h3>
+                                <h4>{word['pronunciation']}</h4>
                                 <div className="add-dict-cta">
                                     <div className="add-icon">+</div>
-                                    <h6>add to my dictionary</h6>
+                                    <h6>add to my <br/>dictionary</h6>
                                 </div>
                                 <div className="translate-tooltip">
                                     {word['translations'][this.state.lang].map(definition => {
                                         return (
                                             <div className="each-def">
                                                 <div className="votes-zone">
-                                                    <CaretUp className="caret-up"/>
+                                                    <CaretUp className="caret-up control"/>
                                                     <div className="vote-count">{definition['votes']}</div>
                                                     <figcaption className="tiny-caption">votes</figcaption>
-                                                    <CaretDown className="caret-down"/>
+                                                    <CaretDown className="caret-down control"/>
                                                 </div>
                                                 <p>{definition['meaning']}</p>
                                             </div>
@@ -189,38 +207,42 @@ class HomeContent extends React.Component {
                                 </div>
                             </div>)
                         })}
+                        </div>
                     </div>
                 </div>
                 <div className="things-to-do-list">
-                    <div className="guide-panel-area">
-                        <div className="each-panel">
-                            <VoteIcon className="panel-icon"/>
-                            <h4>Vote on resource usefulness</h4>
+                    <h3>On Minnannotator, you can</h3>
+                    <div className="row">
+                        <div className="guide-panel-area">
+                            <div className="each-panel">
+                                <VoteIcon className="panel-icon"/>
+                                <h4>Vote on resource usefulness</h4>
+                            </div>
+                            <div className="each-panel">
+                                <LangToggleIcon className="panel-icon"/>
+                                <h4>Browse in your first language</h4>
+                            </div>
+                            <div className="each-panel">
+                                <BookmarkIcon className="panel-icon"/>
+                                <h4>Bookmark legal resources and lawyers for future reference</h4>
+                            </div>
+                            <div className="each-panel">
+                                <AnnotateIcon className="panel-icon"/>
+                                <h4>Review websites by adding annotation and help your community navigate through legal websites smoothly</h4>
+                            </div>
+                            <div className="each-panel">
+                                <DictionaryIcon className="panel-icon"/>
+                                <h4>Learn legal terminologies in Japanese and add more for the community</h4>
+                            </div>
+                            <div className="each-panel">
+                                <CommentIcon className="panel-icon"/>
+                                <h4>Ask the community, share your experiences</h4>
+                            </div>
                         </div>
-                        <div className="each-panel">
-                            <LangToggleIcon className="panel-icon"/>
-                            <h4>Browse in your first language</h4>
+                        <div className="sponsor">
+                            <p>Sponsored Advertisement</p>
+                            <img src={placeholderImage} />
                         </div>
-                        <div className="each-panel">
-                            <BookmarkIcon className="panel-icon"/>
-                            <h4>Bookmark legal resources and lawyers for future reference</h4>
-                        </div>
-                        <div className="each-panel">
-                            <AnnotateIcon className="panel-icon"/>
-                            <h4>Review websites by adding annotation and help your community navigate through legal websites smoothly</h4>
-                        </div>
-                        <div className="each-panel">
-                            <DictionaryIcon className="panel-icon"/>
-                            <h4>Learn legal terminologies in Japanese and add more for the community</h4>
-                        </div>
-                        <div className="each-panel">
-                            <CommentIcon className="panel-icon"/>
-                            <h4>Ask the community, share your experiences</h4>
-                        </div>
-                    </div>
-                    <div className="sponsor">
-                        <p>Sponsored Advertisement</p>
-                        <img src={placeholderImage} />
                     </div>
                 </div>
             </div>

@@ -5,16 +5,16 @@
         "pronunciation": "Rouki",
         "translations": {
             "en": [
-                {"id": "001", "meaning": "lorem ipsum 1", "votes": 56},
-                {"id": "002", "meaning": "lorem ipsum 2", "votes": 37}
+                {"id": "001", "meaning": "rouki lorem ipsum 1", "votes": 56},
+                {"id": "002", "meaning": "rouki lorem ipsum 2", "votes": 37}
             ],
             "fr": [
-                {"id": "001", "meaning": "lorem ipsum 1", "votes":26},
+                {"id": "001", "meaning": "rouki lorem ipsum 1", "votes":26},
                 {"id": "002", "meaning": "lorem ipsum 2", "votes": 7}
             ],
             "vi": [
-                {"id": "001", "meaning": "lorem ipsum 1", "votes":226},
-                {"id": "002", "meaning": "lorem ipsum 2", "votes": 127}
+                {"id": "001", "meaning": "rouki lorem ipsum 1", "votes":226},
+                {"id": "002", "meaning": "rouki lorem ipsum 2", "votes": 127}
             ]
         },
         "lang-popularity": {
@@ -30,11 +30,11 @@
         "pronunciation": "Kaigyohtodoke",
         "translations": {
             "en": [
-                {"id": "001", "meaning": "lorem ipsum", "votes": 209}
+                {"id": "001", "meaning": "kaigyo lorem ipsum", "votes": 209}
             ],
             "ge": [
-                {"id": "001", "meaning": "lorem ipsum 1", "votes":88},
-                {"id": "002", "meaning": "lorem ipsum 2", "votes": 3}
+                {"id": "001", "meaning": "kaigyo lorem ipsum 1", "votes":88},
+                {"id": "002", "meaning": "kaigyo lorem ipsum 2", "votes": 3}
             ]
         },
         "lang-popularity": {
@@ -49,9 +49,9 @@
         "pronunciation": "Jidan",
         "translations": {
             "en": [
-                {"id": "001", "meaning": "lorem ipsum 1", "votes": 122},
-                {"id": "002", "meaning": "lorem ipsum 2", "votes": 33},
-                {"id": "003", "meaning": "lorem ipsum 3", "votes": 12}
+                {"id": "001", "meaning": "jidaj lorem ipsum 1", "votes": 122},
+                {"id": "002", "meaning": "jidan lorem ipsum 2", "votes": 33},
+                {"id": "003", "meaning": "jidan lorem ipsum 3", "votes": 12}
             ]
         },
         "lang-popularity": {
@@ -65,8 +65,8 @@
         "pronunciation": "Chizai",
         "translations": {
             "en": [
-                {"id": "001", "meaning": "lorem ipsum 1", "votes": 82},
-                {"id": "002", "meaning": "lorem ipsum 2", "votes": 13}
+                {"id": "001", "meaning": "chizai lorem ipsum 1", "votes": 82},
+                {"id": "002", "meaning": "chizai lorem ipsum 2", "votes": 13}
             ]
         },
         "lang-popularity": {

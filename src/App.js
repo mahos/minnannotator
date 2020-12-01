@@ -40,7 +40,7 @@ function App() {
       </nav>
       <div className="content">
         <HomeContent />
-        <ExpertsDirectory />
+        {/* <ExpertsDirectory /> */}
       </div>
       <footer></footer>
 
