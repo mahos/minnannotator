@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto&family=Roboto+Slab&display=swap');
+/* font-family: 'Pangolin', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif; */
+
 button {
   padding: 8px 12px;
   border-radius: 4px;
+  cursor: pointer;
 }
 button.primary {
   background-color: black;
@@ -14,6 +20,53 @@ button.secondary {
   color: black;
 }
 
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  height: 64px;
+  position: fixed;
+  z-index: 500;
+  background-color: rgba(255, 255, 255, 0.88)
+}
+nav .logo-area,
+nav .logo-area * {
+  font-family: 'Pangolin', cursive;
+  text-decoration: none;
+  color: black;
+  font-size: 1.9rem;
+  margin-left: 24px;
+
+}
+
+.nav-links {
+  justify-self: center;
+}
+.nav-links ul {
+  display: flex;
+  list-style-type: none;
+}
+.nav-links ul li {
+  font-size: 0.9rem;
+  margin-right: 24px;
+}
+
+nav .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+nav .setup-options {
+  margin-right: 12px;
+}
+nav .authentication {
+  margin-right: 24px;
+}
+.content {
+  padding-top: 72px; /* 64px min from navbar*/
+}
 /* 
 .App {
   text-align: center;

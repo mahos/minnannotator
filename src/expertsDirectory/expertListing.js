@@ -69,7 +69,7 @@ class ExpertListContent extends React.Component {
                                     <img className="main-image" alt={"image of " + expert['name']} src={placeholderImage} />
                                     <div>
                                         <img className="sub-image" alt={"image of " + expert['name']} src={placeholderImage} />
-                                        <img className="sub-image"  alt={"image of " + expert['name']}src={placeholderImage} />
+                                        <img className="sub-image"  alt={"image of " + expert['name']} src={placeholderImage} />
                                     </div>
                                 </div>
                                 <div className="details-zone">

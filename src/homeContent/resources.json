@@ -1,0 +1,54 @@
+[
+    {
+        "id": "000001",
+        "title": "Jisou",
+        "tags": ["family", "international marriage", "custody", "divorce"],
+        "website": "xxxx-yy-japan.com",
+        "allVotes": 72,
+        "VotesByLang": {
+            "en": 38,
+            "ru": 12,
+            "zho": 22
+        },
+        "image": ["./images/temporary/tempimageA.jpg"]
+    },
+    {
+        "id": "000002",
+        "title": "Kokusai Koryu Kaikan",
+        "tags": ["general consultation", "family", "international student"],
+        "website": "xxxx-law-office.com",
+        "allVotes": 272,
+        "VotesByLang": {
+            "en": 30,
+            "ru": 58,
+            "zho": 122,
+            "vi": 62
+        },
+        "image": ["./images/temporary/tempimageB.jpg"]
+    },{
+        "id": "000003",
+        "title": "xxxx law help",
+        "tags": ["IP", "patent", "copyright", "small business"],
+        "website": "so-you-want-to-xx-in-japan.com",
+        "allVotes": 99,
+        "VotesByLang": {
+            "en": 65,
+            "fr": 13,
+            "ru": 5,
+            "zho": 16
+        },
+        "image": ["./images/temporary/tempimageA.jpg"]
+    },{
+        "id": "000004",
+        "title": "what to do if XXX",
+        "tags": ["fraud", "accidents", "litigation"],
+        "website": "help-from-japan.com",
+        "allVotes": 104,
+        "VotesByLang": {
+            "en": 24,
+            "ru": 76,
+            "zho": 4
+        },
+        "image": ["./images/temporary/tempimageA.jpg"]
+    }
+]

@@ -1,0 +1,77 @@
+[
+    {
+        "japanese": "労基",
+        "rubi": "ろう・き",
+        "pronunciation": "Rouki",
+        "translations": {
+            "en": [
+                {"id": "001", "meaning": "lorem ipsum 1", "votes": 56},
+                {"id": "002", "meaning": "lorem ipsum 2", "votes": 37}
+            ],
+            "fr": [
+                {"id": "001", "meaning": "lorem ipsum 1", "votes":26},
+                {"id": "002", "meaning": "lorem ipsum 2", "votes": 7}
+            ],
+            "vi": [
+                {"id": "001", "meaning": "lorem ipsum 1", "votes":226},
+                {"id": "002", "meaning": "lorem ipsum 2", "votes": 127}
+            ]
+        },
+        "lang-popularity": {
+            "en": 93, 
+            "fr": 33, 
+            "vi": 353
+        },
+        "total-popularity": 479
+    },
+    {
+        "japanese": "開業届",
+        "rubi": "かい・ぎょう・とどけ",
+        "pronunciation": "Kaigyohtodoke",
+        "translations": {
+            "en": [
+                {"id": "001", "meaning": "lorem ipsum", "votes": 209}
+            ],
+            "ge": [
+                {"id": "001", "meaning": "lorem ipsum 1", "votes":88},
+                {"id": "002", "meaning": "lorem ipsum 2", "votes": 3}
+            ]
+        },
+        "lang-popularity": {
+            "en": 209, 
+            "ge": 91
+        },
+        "total-popularity": 300
+    },
+    {
+        "japanese": "示談",
+        "rubi": "じ・だん",
+        "pronunciation": "Jidan",
+        "translations": {
+            "en": [
+                {"id": "001", "meaning": "lorem ipsum 1", "votes": 122},
+                {"id": "002", "meaning": "lorem ipsum 2", "votes": 33},
+                {"id": "003", "meaning": "lorem ipsum 3", "votes": 12}
+            ]
+        },
+        "lang-popularity": {
+            "en": 167
+        },
+        "total-popularity": 167
+    },
+    {
+        "japanese": "知財",
+        "rubi": "ち・ざい",
+        "pronunciation": "Chizai",
+        "translations": {
+            "en": [
+                {"id": "001", "meaning": "lorem ipsum 1", "votes": 82},
+                {"id": "002", "meaning": "lorem ipsum 2", "votes": 13}
+            ]
+        },
+        "lang-popularity": {
+            "en": 95
+        },
+        "total-popularity": 95
+    }
+]

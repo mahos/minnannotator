@@ -26,7 +26,7 @@
     },
     "ay": {
         "langName": "Aymara",
-        "flag": "🇵🇪🇧🇴",
+        "flag": "🇵🇪🇧",
         "flagEmoji": true
     },
     "az": {
@@ -101,7 +101,7 @@
     },
     "en": {
         "langName": "English",
-        "flag": "🇬🇧🇺🇸",
+        "flag": "🇺🇸",
         "flagEmoji": true
     },
     "es": {
@@ -551,7 +551,7 @@
     },
     "sw": {
         "langName": "Swahili",
-        "flag": "🇹🇿🇰🇪",
+        "flag": "🇹🇿",
         "flagEmoji": true
     },
     "ta": {
@@ -626,7 +626,7 @@
     },
     "ug": {
         "langName": "Uighur; Uyghur",
-        "flag": "🇨🇳🇰🇿",
+        "flag": "🇨🇳",
         "flagEmoji": true
     },
     "uk": {
@@ -646,7 +646,7 @@
     },
     "ve": {
         "langName": "Venda",
-        "flag": "🇿🇦🇿🇼",
+        "flag": "🇿🇦",
         "flagEmoji": true
     },
     "vi": {
