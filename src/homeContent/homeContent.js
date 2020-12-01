@@ -73,18 +73,22 @@ class HomeContent extends React.Component {
                         Join our community, get help, then use your 
                         experience to help others find the right legal support.</h2>
                         <button className="primary">Sign Up</button>
-                        <a><p>Read more about how the site works</p></a>
+                        <a href=""><p>Read more about how the site works</p></a>
                     </div>
-                    <img className="hero-image" src={placeholderImage} />
+                    <div className="hero-image-container">
+                        <img src={placeholderImage} />
+                    </div>
                 </div>
                 <div className="ranking-panels-area">
-                    <div className="top-resource-panel">
+                    <div className="top-resource-panel panel">
                         <h2 className="panel-title">Top Resources</h2>
                         <ToggleLang lang="en"/>
                         <div className="resource-list">
                             {resourceData.slice(0,3).map((resource, index) => {
                                 return (<div className="resource-card">
-                                    <img src={placeholderImage} />
+                                    <div className="card-image-container">
+                                        <img src={placeholderImage} />
+                                    </div>
                                     <div className="resource-info">
                                         <h3><div>{index + 1}</div>{resource['website']}</h3>
                                         <div className="topic-tags">
@@ -94,17 +98,17 @@ class HomeContent extends React.Component {
                                         </div>
                                     </div>
                                     <div className="votes-zone">
-                                        <CaretUp className="caret-up"/>
+                                        <CaretUp className="caret-up control"/>
                                         <div className="vote-count">{resource['allVotes']}</div>
                                         <figcaption className="tiny-caption">votes</figcaption>
-                                        <CaretDown className="caret-down"/>
+                                        <CaretDown className="caret-down control"/>
                                     </div>
                                 </div>)
                             })}
                         </div>
                         <a href="#">More</a>
                     </div>
-                    <div className="forum-topic-panel">
+                    <div className="forum-topic-panel panel">
                         <h2 className="panel-title">Hot Forum Topic</h2>
                         <div className="topic-list">
                             {forumTopicData.slice(0,3).map((topic, index) => {
@@ -130,7 +134,7 @@ class HomeContent extends React.Component {
                         </div>
                         <a href="#">More</a>
                     </div>
-                    <div className="recently-annotated-panel">
+                    <div className="recently-annotated-panel panel">
                         <h2 className="panel-title">Recently Annotated</h2>
                         <div className="annotated-card">
                             <img src={placeholderImage} />
@@ -156,7 +160,7 @@ class HomeContent extends React.Component {
                         </div>
                         <a href="#">More</a>
                     </div>
-                    <div className="popular-keywords-panel">
+                    <div className="popular-keywords-panel panel">
                         <h2 className="panel-title">Popular Keywords</h2>
                         <ToggleLang lang="en"/>
                         {keywordsData.slice(0,3).map(word => {

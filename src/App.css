@@ -65,7 +65,7 @@ nav .authentication {
   margin-right: 24px;
 }
 .content {
-  padding-top: 72px; /* 64px min from navbar*/
+  padding-top: 64px; /* 64px min from navbar*/
 }
 /* 
 .App {
