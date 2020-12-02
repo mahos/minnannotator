@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.css';
+import { Router } from 'react-router-dom';
+import history from './utilities/history';
+import Routes from './routes/index';
+
 import HomeContent from './homeContent/homeContent';
 import ExpertsDirectory from './expertsDirectory/expertsDirectory';
 const langFlagData = require('./expertsDirectory/langFlagByCode.json')
@@ -15,11 +19,11 @@ function App() {
     <div className="App">
       <nav>
         <div className="logo-area">
-          <a href="#">Minnannotator</a>
+          <a href="/">Minnannotator</a>
         </div>
         <div className="nav-links">
           <ul>
-            <li>Look for Experts</li>
+            <a href="./directory"><li>Look for Experts</li></a>
             <li>Forums</li>
             <li>Resources</li>
           </ul>
@@ -39,7 +43,10 @@ function App() {
         </div>
       </nav>
       <div className="content">
-        <HomeContent />
+        <Router history={history}>
+          <Routes />
+        </Router>
+        {/* <HomeContent /> */}
         {/* <ExpertsDirectory /> */}
       </div>
       <footer>
