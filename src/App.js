@@ -42,7 +42,9 @@ function App() {
         <HomeContent />
         {/* <ExpertsDirectory /> */}
       </div>
-      <footer></footer>
+      <footer>
+        <h6>Minnannotator © 2020 All Rights Reserved</h6>
+      </footer>
 
 
     </div>

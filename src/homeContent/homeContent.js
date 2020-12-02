@@ -208,6 +208,7 @@ class HomeContent extends React.Component {
                             </div>)
                         })}
                         </div>
+                        <a className="more-link" href="#">More</a>
                     </div>
                 </div>
                 <div className="things-to-do-list">

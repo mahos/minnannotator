@@ -306,12 +306,14 @@
 .popular-keywords-panel {
     grid-column: 3 / 3;
     grid-row: 2 / 2;
+    position: relative;
 }
 
 .keywords {
     display: flex;
     justify-content: space-around;
     position: relative;
+    padding-bottom: 18px;
 }
 
 .word-zone h3 {
@@ -371,6 +373,12 @@
     margin: 0;
     width: 12px;
 }
+
+.popular-keywords-panel a.more-link {
+    position: relative;
+    /* color: red; */
+}
+
 
 .things-to-do-list {
     padding: 24px;
