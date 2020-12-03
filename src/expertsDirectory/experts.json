@@ -10,7 +10,7 @@
         "phone": "000-111-2222",
         "fax": "111-222-3333",
         "website-lang": ["ja", "en"],
-        "images": ["./images/temporary/tempimageA.jpg","./images/temporary/tempimageB.jpg"],
+        "images": ["image1.png","image2.png", "image3.png"],
         "annotation-info": {
             "annotation-lang": ["en", "zho"],
             "annotators": [["User X", "2020-08-03T23:11:44Z", "en"], ["User Y", "2020-08-08T03;51:42Z", "zho"], ["User Z", "2020-11-03T19:09:22Z", "en"]],
@@ -20,13 +20,13 @@
                     "description": "Top page in Japanese",
                     "annotations": [],
                     "edit-history": [],
-                    "image-url": "./images/temporary/tempscreenimageA.jpg"
+                    "image-url": "desktop_main_1.png"
                 },{
                     "title": "Annotation about us page",
                     "description": "about us in Japanese",
                     "annotations": [],
                     "edit-history": [],
-                    "image-url": "./images/temporary/tempscreenimageB.jpg"
+                    "image-url": "mobile_main_1.png"
                 }
             ]
         }
@@ -42,7 +42,7 @@
         "phone": "000-111-2222",
         "fax": "111-222-3333",
         "website-lang": ["ja", "en"],
-        "images": ["./images/temporary/tempimageA.jpg","./images/temporary/tempimageB.jpg"],
+        "images": [],
         "annotation-info": {
             "annotation-lang": ["en", "zho", "os", "fj", "vi"],
             "annotators": [["User X", "2020-08-03T23:11:44Z", "en"], ["User Y", "2020-08-08T03;51:42Z", "zho"], ["User Z", "2020-11-03T19:09:22Z", "en"]],
@@ -52,13 +52,13 @@
                     "description": "Top page in Japanese",
                     "annotations": [],
                     "edit-history": [],
-                    "image-url": "./images/temporary/tempscreenimageA.jpg"
+                    "image-url": ""
                 },{
                     "title": "Annotation about us page",
                     "description": "about us in Japanese",
                     "annotations": [],
                     "edit-history": [],
-                    "image-url": "./images/temporary/tempscreenimageB.jpg"
+                    "image-url": ""
                 }
             ]
         }
@@ -75,7 +75,7 @@
         "phone": "000-111-2222",
         "fax": "111-222-3333",
         "website-lang": ["ja"],
-        "images": ["./images/temporary/tempimageA.jpg","./images/temporary/tempimageB.jpg"],
+        "images": ["",""],
         "annotation-info": {
             "annotation-lang": ["en", "zho"],
             "annotators": [["User X", "2020-08-03T23:11:44Z", "en"], ["User Y", "2020-08-08T03;51:42Z", "zho"], ["User Z", "2020-11-03T19:09:22Z", "en"]],
@@ -85,13 +85,13 @@
                     "description": "Top page in Japanese",
                     "annotations": [],
                     "edit-history": [],
-                    "image-url": "./images/temporary/tempscreenimageA.jpg"
+                    "image-url": ""
                 },{
                     "title": "Annotation about us page",
                     "description": "about us in Japanese",
                     "annotations": [],
                     "edit-history": [],
-                    "image-url": "./images/temporary/tempscreenimageB.jpg"
+                    "image-url": ""
                 }
             ]
         }

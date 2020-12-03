@@ -1,0 +1,387 @@
+.expert-detail-content {
+    padding: 28px 3%;
+    width: 100%;
+    position: relative;
+}
+.back-nav a {
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: fit-content;
+}
+
+
+.back-nav a p {
+    padding-left: 8px;
+}
+
+
+h6 {
+    margin-bottom: 2px;
+    color: #6F5D6C;
+    font-size: 0.8rem;
+}
+
+
+.expert-detail {
+    position: relative;
+    width: 90%;
+    margin: 24px auto;
+    border: 1px solid lightgray;
+    box-shadow: 3px 6px 16px lightgray;
+    padding: 16px 16px 32px 16px;
+    display: flex;
+}
+
+.votes-zone {
+    width: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.votes-zone .vote-count {
+    font-size: 1.6rem;
+}
+
+.caret-up {
+    margin-bottom: 8px;
+}
+.caret-down {
+    margin-top: 8px;
+}
+
+.images-zone {
+    width: 28%;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+
+}
+
+.images-zone img.main-image {
+    width: 100%;
+    margin-bottom: 4%;
+}
+
+.images-zone img.sub-image {
+    width: 48%;
+}
+img.sub-image:first-of-type {
+    margin-right: 2%;
+    margin-left: 0;
+}
+img.sub-image:last-of-type {
+    margin-right: 0;
+    margin-left: 2%;
+}
+
+.details-zone {
+    margin-left: 32px;
+    width: 40%;
+}
+
+.details-zone .bookmark-area {
+    position: absolute;
+    top: 12px;
+    right: 32px;
+    text-align: center;
+}
+
+.business-title {
+    display: flex;
+    align-items: center;
+}
+
+.business-title .community-badge {
+    height: 1rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags .tag-badge {
+    background-color: #400B36;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}   
+
+.location-list {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+}
+.connect {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+}
+
+.website {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.phones {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.phones div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.website .icon,
+.phones .icon {
+    margin-right: 4px;
+}
+
+.flag-list {
+    display: flex;
+}
+.flag-icon {
+    margin-right: 4px;
+    position: relative;
+    height: fit-content;
+}
+.flag-icon p {
+    font-size: 1.8rem;
+    margin: 0;
+}
+.flag-icon img {
+    width: 26px;
+    height: 16px;
+    border: 1px solid lightgray;
+    margin: 0;
+    margin-top: 0.5rem;
+}
+
+.flag-icon figcaption {
+    font-size: 0.7rem;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2px 4px;
+    top: 0px;
+}
+
+.remainder-lang {
+    font-size: 0.8rem;
+}
+.other-flags {
+    display: none;
+}
+
+.annotator-info {
+    color: gray;
+}
+.annotator-info div.user-info{
+    display: flex;
+}
+
+.user-info span {
+    margin-top: 23px;
+    margin-left: 4px;
+}
+
+.annotator-info > h6 {
+    margin-top: 0px;
+}
+
+
+/* annotation zone  */
+.annotation-zone {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* edit area */
+.annotation-edit-tools {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: #6F5D6C;
+    font-weight: 600;
+}
+
+.anno-lang-option {
+    border: 1px solid gray;
+    width: fit-content;
+    display: flex;
+    /* align-items: center; */
+}
+
+.toggle-anno-view {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 18px 8px; 
+    
+    width: 180px;
+}
+
+.eyecon {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+.toggle-anno-view span {
+    margin-left: 8px;
+    position: absolute;
+    right: 18px;
+}
+.anno-lang-option select {
+    border-radius: 0;
+    border: none;
+    border-left: 1px solid gray;
+    padding: 12px;
+    font-size: 1.9rem;
+}
+
+.toggle-popular-anno {
+    display: flex;
+    border: 1px solid gray;
+    align-items: center;
+}
+
+.toggle-popular-anno .check-box-area {
+    padding: 8px;
+}
+
+.toggle-popular-anno .toggle-popular {
+    height: 100%;
+    position: relative;
+    border-left: 1px solid gray;
+    display: flex;
+    /* padding: 8px; */
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-popular-anno .toggle-popular input {
+    width: 100%;
+    text-align: center;
+    /* padding-left: 12px; */
+    font-size: 1.2rem;
+    border: none;
+}
+
+.edit-annotation {
+    border: 1px solid lightgray;
+    padding: 8px 12px 8px 8px;
+    display: flex;
+    align-items: center;
+    color: lightgray;
+}
+
+.edit-annotation .icon {
+    margin-right: 8px;
+}
+
+.document {
+    position: relative;
+    margin-top: 24px;
+    width: 90%;
+    text-align: center;
+}
+
+.document img.annotated {
+    border: 1px solid gray;
+    width: 100%;
+}
+
+
+.annotation-more-info {
+    display: flex;
+    width: 90%;
+    margin-top: 24px;
+}
+
+.participant-history {
+    border: 1px solid gray;
+    width: 55%;
+    margin-right: 3%;
+    padding: 8px 16px;
+    height: 180px;
+    overflow: auto;
+}
+
+.participant-history h4 {
+    color: #400B36;
+}
+
+.participant-history .annotator-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    justify-content: space-between;
+    border-bottom: 0.5px solid lightgray;
+}
+
+.annotator-action {
+    display: flex;
+    align-items: center;
+}
+
+.annotator-action img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 0.6px solid gray;
+    margin-right: 8px;
+}
+
+.other-annotations {
+    border: 1px solid gray;
+    width: 40%;
+    height: 180px;
+    overflow: auto;
+    padding: 8px 16px;
+}
+
+.other-annotations .annotated-page {
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    box-shadow: 1px 3px 6px gray;
+    width: 90%;
+    height: 140px;
+    margin: 2% auto;
+}
+
+.other-annotations .annotated-page img {
+    height: 100%;
+    width: 40%;
+    object-fit: cover;
+    object-position: top;
+    overflow: hidden;
+}
+
+.other-annotations .annotated-page .page-info {
+    padding-left: 5%;
+}
+
+.other-annotations .annotated-page .page-info h4 {
+    color: #400B36;
+}
