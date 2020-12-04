@@ -8,14 +8,61 @@ class FilterForm extends React.Component {
             friendliness: [],
             serviceType: [],
             practiceArea: [],
-            source: []
+            source: [],
+            test1: {
+                'subtitle': true
+            },
+            test2: false,
+            checkFields: {
+                'Non-Japanese Friendliness': {
+                    'Community reviewed': false,
+                    'Has website' : false,
+                    'Multi-lingual': false,
+                    'More than 50 upvotes': false,
+                    'Offers free consultation': false,
+                    'Translator available': false,
+                    'Online consultation available': false
+                },
+                'Legal Service / Type': {
+                    'Attorney': false,
+                    'Judicial Scrivener' : false,
+                    'Patent Agent': false,
+                    'Administrative Scrivener': false
+                },
+                'Practice Areas': {
+                    'Arbitration and Mediation': false,
+                    'Asset Finance Law': false,
+                    'Banking and Finance': false,
+                    'Capital Markets': false,
+                    'Constructions Law': false,
+                    'Corporate Compliance': false,
+                    'Criminal Defense': false,
+                    'Entertainment Law': false,
+                    'Insurance Law': false,
+                    'Intellectual Property': false,
+                    'International Arbitration': false,
+                    'International Business': false,
+                    'Labor and Employment': false,
+                    'Litigation': false,
+                    'Private Equity and Funds': false,
+                    'Real Estate': false,
+                    'Technology': false,
+                    'Venture Capital Law': false
+                },
+                'Result Source':  {
+                    'sumline.jp': false,
+                    'HG.org': false,
+                    'bengoshikai.jp/himawari search': false,
+                    'legal.coconala.com': false
+                }
+            }
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleReset = this.handleReset.bind(this);
     }
 
     handleSubmit() {
-        console.log('detail form submission happening');
+        console.log('detail form submission happening - ', this.state.checkFields);
     }
     handleReset() {
         console.log('resetting detail form...');
@@ -64,9 +111,7 @@ class FilterForm extends React.Component {
                 'legal.coconala.com': false
             }
         }
-        const checkFields2 = [
-            'test', 'test2', 'test3'
-        ]
+
         return (
             <div className="detail-form">
                 <div className="form-action-buttons">
@@ -84,6 +129,7 @@ class FilterForm extends React.Component {
                                    return  (
                                     <div>
                                         <input type="checkbox" name={checkfield[0]} value={checkfield[0]} defaultChecked={checkfield[1]}/>
+                                        {/* <input type="checkbox" onChange={this.setState({checkFields[item[0]][checkfield[0]]:true})} name={checkfield[0]} value={checkfield[0]} defaultChecked={checkfield[1]}/> */}
                                         <label>{checkfield[0]}</label>
                                     </div>
                                     )

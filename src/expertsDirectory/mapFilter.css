@@ -1,11 +1,17 @@
 .map-filter-area {
     display: flex;
+    margin-top: 32px;
+}
+
+.japan-map {
+    margin-top: 100px;
+    width: 40%;
 }
 
 .region-map {
-    border: 2px solid black;
+    border: 2px dotted #6F5D6C;
     width: 60%;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 label.region-caption {
     font-size: 0.8em;
@@ -17,7 +23,7 @@ label.region-caption {
 }
 
 .prefecture-area.selected {
-    border: 2px solid red;
+    border: 2px solid #400B36;
 }
 .prefecture-map {
     border: 2px solid gray;
@@ -25,11 +31,15 @@ label.region-caption {
     display: flex;
 }
 .prefecture-map.selected {
-    background-color: black;
+    background-color: #400B36;
 }
 label.prefecture-caption {
     font-size: 0.7em;
     color: gray;
+}
+
+.prefecture-map.selected label.prefecture-caption {
+    color: white;
 }
 
 .region-text-panel {
@@ -39,6 +49,8 @@ label.prefecture-caption {
 .region-full-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    /* grid-template-columns: (2, repeat); */
     
 }
 .region {
@@ -48,7 +60,7 @@ label.prefecture-caption {
     /* max-width: 50%; */
 }
 .region-title {
-    color: darkblue;
+    color: #400B36;
 }
 
 ul.prefecture-listing {
@@ -61,7 +73,7 @@ ul.prefecture-listing {
 }
 
 li.prefecture-name.selected div{
-    background-color: rgb(94, 94, 94);
+    background-color:#6F5D6C;
     color: white;
     width: fit-content;
 }

@@ -18,6 +18,8 @@ console.log('voteOrderedData: ', voteOrderedData)
 
 console.log('languages and flag data: ', langFlagData)
 
+let filteredData = [];
+
 
 class ExpertListContent extends React.Component {
     constructor(props) {
@@ -27,6 +29,26 @@ class ExpertListContent extends React.Component {
             flagHover: false,
         }
     }
+    narrowData(region, options) {
+        filteredData = [];
+        console.log('narrowing down region data - ', region)
+        if (region == 'All Regions' && options.length == 0) {
+            filteredData = voteOrderedData;
+            return;
+        }
+        voteOrderedData.forEach(data => {
+            if (data['locations'].includes(region)) {
+                filteredData.push(data);
+            } 
+
+            options.forEach(reqOption => {
+                console.log('going around options: ', reqOption);
+            })
+            
+        })
+    }
+
+    
     
     handleFlagMouseEnter() {
         console.log('flag mouseover activated!');
@@ -37,13 +59,14 @@ class ExpertListContent extends React.Component {
         this.setState({flagHover: false});
     }
     render() {
+        this.narrowData(this.props.region, this.props.options)
         const flagCaptionStyle = {
             display: this.state.flagHover ? 'block': 'none'
         }
         return (
             <div className="filter-result-content">
                 <div className="result-stat-area">
-                    <label className="result-count">{this.state.resultCount} results</label>
+                    <label className="result-count">{filteredData.length} results</label>
                     <div className="sorter">
                         <label>Sort by: 
                             <select>
@@ -55,7 +78,7 @@ class ExpertListContent extends React.Component {
                     </div>
                 </div>
                 <div className="result-listing-area">
-                    {voteOrderedData.map(expert => {
+                    {filteredData.slice(0,8).map(expert => {
                         return (
                             <div className="expert-card">
                                 <div className="votes-zone">
@@ -183,7 +206,7 @@ class ExpertListContent extends React.Component {
                                     </div>
                                 </div>
                                 <div className="action-zone">
-                                    <a className="read-more-button" href="#"><button className="primary">Go Read More</button></a>
+                                    <a className="read-more-button" href={'/detail/' + expert['id']}><button className="primary">Go Read More</button></a>
                                 </div>
                             </div>
                         )

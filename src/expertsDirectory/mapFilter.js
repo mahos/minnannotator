@@ -68,15 +68,12 @@ class RegionSelector extends React.Component {
         {'Kansai': 'Kansai Region'}, {'Shikoku': 'Shikoku'}, {'Tohoku': 'Tohoku Region'}, {'Chubu': 'Chubu Region'}, 
         {'Chugoku': 'Chugoku Region'}, {'Kyushu': 'Kyushu'}, {'Okinawa': 'Okinawa'}]
 
-        // const fullList = regionOrder.forEach(region => {
         const fullList = regionOrder.map(region => {
-            // console.log('region key', Object.keys(region)[0])
             return (
                 <div className="region" onMouseOver={(event) => {this.handleRegionHover(event, Object.keys(region)[0])}}>
                     <h4 className="region-title">{Object.values(region)[0]}</h4>
                     <ul className="prefecture-listing">
                         {japanRegions[Object.keys(region)[0]].map(prefecture => {
-                            // console.log('prefecture', prefecture)
                             return (
                                 <li className={prefecture === selectedPrefecture? 'prefecture-name selected': 'prefecture-name'} onClick={(event) => {this.handlePrefectureClick(event, prefecture)}}>
                                     <div>{prefecture}</div>
@@ -104,10 +101,10 @@ class MapFilter extends React.Component {
     constructor(props) {
         super(props);
         this.handleRegionHover = this.handleRegionHover.bind(this);
-        this.handleClickedPrefecture = this.handleClickedPrefecture.bind(this)
+        this.handleClickedPrefecture = this.handleClickedPrefecture.bind(this);
         this.state = {
             hoveredRegion: 'Misc',
-            selectedPrefecture: 'All Regions'
+            selectedPrefecture: this.props.selectedPref
         }
     }
 
@@ -117,16 +114,18 @@ class MapFilter extends React.Component {
 
     handleClickedPrefecture(prefecture) {
         this.setState({selectedPrefecture: prefecture});
+        this.props.onRegionSelection(prefecture)
     }
 
     
     render() {
+        console.log('selected pref: ', this.state.selectedPrefecture)
         const focusRegion = this.state.hoveredRegion;
-        const selectedPrefecture = this.state.selectedPrefecture;
+        let selectedPrefecture = this.state.selectedPrefecture;
         return (
             <div className="map-filter-area">
-            <MapView hoveredRegion={focusRegion} clickedPrefecture={selectedPrefecture}/>
-            <RegionSelector clickedPrefecture={selectedPrefecture} onRegionHovered={this.handleRegionHover} onPrefectureClicked={this.handleClickedPrefecture} />
+                <MapView hoveredRegion={focusRegion} clickedPrefecture={selectedPrefecture}/>
+                <RegionSelector className="text-filter" clickedPrefecture={selectedPrefecture} onRegionHovered={this.handleRegionHover} onPrefectureClicked={this.handleClickedPrefecture} />
             </div>
         )
     }

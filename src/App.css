@@ -9,15 +9,15 @@ button {
   cursor: pointer;
 }
 button.primary {
-  background-color: black;
+  background-color: #400B36;
   border: 2px solid transparent;
   color: white;
 }
 
 button.secondary {
   background-color: white;
-  border: 2px solid black;
-  color: black;
+  border: 2px solid #400B36;
+  color: #400B36;
 }
 
 a {
@@ -60,9 +60,25 @@ nav .logo-area * {
 }
 .nav-links ul li {
   font-size: 0.9rem;
-  margin-right: 24px;
+  /* margin-right: 32px; */
 }
 
+.nav-links ul a.not-ready {
+  cursor: not-allowed;
+  color: gray;
+}
+.nav-links ul a {
+  height: 32px;
+  border-bottom: 8px transparent solid;
+  display: flex;
+  align-items: center;
+  padding: 2px 12px;
+  margin-right: 32px;
+}
+.nav-links ul a:hover,
+.nav-links ul.active {
+  border-bottom: 8px #400B36 solid;
+}
 nav .nav-right {
   display: flex;
   align-items: center;
@@ -79,13 +95,14 @@ nav .authentication {
 }
 footer {
   width: 100%;
-  border-top: 1px solid rgb(32, 32, 32);
+  /* border-top: 0.5px solid #400B36; */
 }
 
 footer h6 {
   text-align: center;
-  margin: 8px auto;
+  margin: 12px auto;
   font-weight: 200;
+  color: #400B36;
 }
 /* 
 .App {

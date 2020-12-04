@@ -2,6 +2,12 @@ import React from 'react';
 import './homeContent.css';
 
 import placeholderImage from '../images/image-placeholder.png';
+import heroImage from '../images/hero-people.png';
+import  sponsorImage from '../images/sponsored.png';
+import  resourceIconImage1 from '../images/resource-icon1.png';
+import  resourceIconImage2 from '../images/resource-icon2.png';
+import  resourceIconImage3 from '../images/resource-icon3.png';
+
 import { ReactComponent as CaretDown} from '../images/icons/caret-down.svg';
 import { ReactComponent as CaretUp} from '../images/icons/caret-up.svg';
 import { ReactComponent as VoteIcon} from '../images/icons/vote-counter.svg';
@@ -13,11 +19,13 @@ import { ReactComponent as AnnotateIcon} from '../images/icons/annotate.svg';
 import { ReactComponent as LangToggleIcon} from '../images/icons/lang-toggle.svg';
 
 
+
 const langFlagData = require('../expertsDirectory/langFlagByCode.json');
 const resourceData = require('./resources.json');
 const forumTopicData = require('./forumTopic.json');
 const keywordsData = require('./keywords.json');
 const experts = require('../expertsDirectory/experts.json');
+
 
 const annotated = experts[experts.length - 1]; // needs to actually check if annotation exists and compare the time of last user annotation
 
@@ -78,7 +86,42 @@ class HomeContent extends React.Component {
                         <a href=""><p>Read more about how the site works</p></a>
                     </div>
                     <div className="hero-image-container">
-                        <img src={placeholderImage} />
+                        <img src={heroImage} />
+                    </div>
+                </div>
+                <div className="things-to-do-list">
+                    <h2>On Minnannotator, you can</h2>
+                    <div className="row">
+                        <div className="guide-panel-area">
+                            <div className="each-panel">
+                                <VoteIcon className="panel-icon"/>
+                                <h4>Vote on resource usefulness</h4>
+                            </div>
+                            <div className="each-panel">
+                                <LangToggleIcon className="panel-icon"/>
+                                <h4>Browse in your first language</h4>
+                            </div>
+                            <div className="each-panel">
+                                <BookmarkIcon className="panel-icon"/>
+                                <h4>Bookmark legal resources and lawyers for future reference</h4>
+                            </div>
+                            <div className="each-panel">
+                                <AnnotateIcon className="panel-icon"/>
+                                <h4>Read, add and learn from community annotations of  legal websites in Japanese</h4>
+                            </div>
+                            <div className="each-panel">
+                                <DictionaryIcon className="panel-icon"/>
+                                <h4>Learn legal terminologies in Japanese and add more</h4>
+                            </div>
+                            <div className="each-panel">
+                                <CommentIcon className="panel-icon"/>
+                                <h4>Ask the community, share your experiences</h4>
+                            </div>
+                        </div>
+                        <div className="sponsor">
+                            <p>Sponsored Advertisement</p>
+                            <img src={sponsorImage} />
+                        </div>
                     </div>
                 </div>
                 <div className="ranking-panels-area">
@@ -91,7 +134,7 @@ class HomeContent extends React.Component {
                             {resourceData.slice(0,3).map((resource, index) => {
                                 return (<div className="resource-card">
                                     <div className="card-image-container">
-                                        <img src={placeholderImage} />
+                                        <img src={`resourceIconImage${index+1}`} />
                                     </div>
                                     <div className="resource-info">
                                         <h3><div>{index + 1}</div>{resource['website']}</h3>
@@ -211,41 +254,7 @@ class HomeContent extends React.Component {
                         <a className="more-link" href="#">More</a>
                     </div>
                 </div>
-                <div className="things-to-do-list">
-                    <h3>On Minnannotator, you can</h3>
-                    <div className="row">
-                        <div className="guide-panel-area">
-                            <div className="each-panel">
-                                <VoteIcon className="panel-icon"/>
-                                <h4>Vote on resource usefulness</h4>
-                            </div>
-                            <div className="each-panel">
-                                <LangToggleIcon className="panel-icon"/>
-                                <h4>Browse in your first language</h4>
-                            </div>
-                            <div className="each-panel">
-                                <BookmarkIcon className="panel-icon"/>
-                                <h4>Bookmark legal resources and lawyers for future reference</h4>
-                            </div>
-                            <div className="each-panel">
-                                <AnnotateIcon className="panel-icon"/>
-                                <h4>Review websites by adding annotation and help your community navigate through legal websites smoothly</h4>
-                            </div>
-                            <div className="each-panel">
-                                <DictionaryIcon className="panel-icon"/>
-                                <h4>Learn legal terminologies in Japanese and add more for the community</h4>
-                            </div>
-                            <div className="each-panel">
-                                <CommentIcon className="panel-icon"/>
-                                <h4>Ask the community, share your experiences</h4>
-                            </div>
-                        </div>
-                        <div className="sponsor">
-                            <p>Sponsored Advertisement</p>
-                            <img src={placeholderImage} />
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         )
     }

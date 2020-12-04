@@ -4,8 +4,6 @@ import { Router } from 'react-router-dom';
 import history from './utilities/history';
 import Routes from './routes/index';
 
-import HomeContent from './homeContent/homeContent';
-import ExpertsDirectory from './expertsDirectory/expertsDirectory';
 const langFlagData = require('./expertsDirectory/langFlagByCode.json')
 
 const availableLang = ['en', 'ja', 'zho', 'vi', 'ru', 'ko', 'si']
@@ -24,8 +22,8 @@ function App() {
         <div className="nav-links">
           <ul>
             <a href="./directory"><li>Look for Experts</li></a>
-            <li>Forums</li>
-            <li>Resources</li>
+            <a className="not-ready"><li >Forums</li></a>
+            <a className="not-ready"><li>Resources</li></a>
           </ul>
         </div>
         <div className="nav-right">
@@ -46,8 +44,6 @@ function App() {
         <Router history={history}>
           <Routes />
         </Router>
-        {/* <HomeContent /> */}
-        {/* <ExpertsDirectory /> */}
       </div>
       <footer>
         <h6>Minnannotator © 2020 All Rights Reserved</h6>
