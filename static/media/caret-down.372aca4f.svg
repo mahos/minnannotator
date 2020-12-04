@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.911" height="11.859" viewBox="0 0 20.911 11.859">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6e6e6e;
+        opacity: 0.278;
+      }
+    </style>
+  </defs>
+  <path id="icon-caret-down" data-name="icon-caret-down" class="cls-1" d="M20.3,12.891H2.2a1.406,1.406,0,0,0-.994,2.4l9.047,9.047a1.406,1.406,0,0,0,1.989,0l9.047-9.047A1.406,1.406,0,0,0,20.3,12.891Z" transform="translate(-0.794 -12.891)"/>
+</svg>

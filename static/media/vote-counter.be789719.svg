@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="89.359" viewBox="0 0 54 89.359">
+  <g id="vote_counter" data-name="vote counter" transform="translate(-557 -350.5)">
+    <path id="Icon_awesome-caret-up" data-name="Icon awesome-caret-up" d="M20.3,24.75H2.2a1.406,1.406,0,0,1-.994-2.4L10.256,13.3a1.406,1.406,0,0,1,1.989,0l9.047,9.047A1.406,1.406,0,0,1,20.3,24.75Z" transform="translate(572.206 337.609)" fill="#400b36"/>
+    <path id="Icon_awesome-caret-up-2" data-name="Icon awesome-caret-up" d="M20.3,12.891H2.2a1.406,1.406,0,0,0-.994,2.4l9.047,9.047a1.406,1.406,0,0,0,1.989,0l9.047-9.047A1.406,1.406,0,0,0,20.3,12.891Z" transform="translate(572.206 415.109)" fill="#400b36"/>
+    <text id="_17" data-name="17" transform="translate(563 398)" fill="#400b36" font-size="32" font-family="HelveticaNeue-Light, Helvetica Neue" font-weight="300"><tspan x="0" y="0">17</tspan></text>
+    <text id="total_votes" data-name="total votes" transform="translate(557 416)" fill="#400b36" font-size="11" font-family="HelveticaNeue-Medium, Helvetica Neue" font-weight="500"><tspan x="0" y="0">total votes</tspan></text>
+  </g>
+</svg>
