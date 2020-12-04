@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Router } from 'react-router-dom';
+import { Router, BrowserRouter } from 'react-router-dom';
 import history from './utilities/history';
 import Routes from './routes/index';
 
@@ -46,9 +46,12 @@ function App() {
         </div>
       </nav>
       <div className="content">
-        <Router history={history}>
+        {/* <Router basename="/minnannotator" history={history}>
           <Routes />
-        </Router>
+        </Router> */}
+        <BrowserRouter basename="/minnannotator">
+          <Routes />
+        </BrowserRouter>
       </div>
       <footer>
         <h6>Minnannotator © 2020 All Rights Reserved</h6>
