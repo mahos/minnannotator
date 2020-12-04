@@ -77,8 +77,15 @@ class ExpertDetail extends React.Component {
         expertsData.some(pro => {
             if (pro['id'] === this.props.match.params.id) {
                 this.setState({expert: pro});
-                this.state.currentlyViewing =`${process.env.PUBLIC_URL}/mockData/` + this.props.match.params.id + '/screenshots/' + pro['annotation-info']['screenshots'][0]['image-url'];
-                this.state.imageRootPath = `${process.env.PUBLIC_URL}/mockData/` + this.props.match.params.id + '/';
+                if (process.env.PUBLIC_URL) {
+                    this.state.currentlyViewing = `${process.env.PUBLIC_URL}/mockData/` + this.props.match.params.id + '/screenshots/' + pro['annotation-info']['screenshots'][0]['image-url'];
+                    this.state.imageRootPath = `${process.env.PUBLIC_URL}/mockData/` + this.props.match.params.id + '/';
+                } else {
+                    this.state.currentlyViewing = `https://mahos.github.io/minnannotator/public/mockData/` + this.props.match.params.id + '/screenshots/' + pro['annotation-info']['screenshots'][0]['image-url'];
+                    this.state.imageRootPath = `https://mahos.github.io/minnannotator/public/mockData/` + this.props.match.params.id + '/';
+                }
+                // this.state.currentlyViewing = `${process.env.PUBLIC_URL}/mockData/` + this.props.match.params.id + '/screenshots/' + pro['annotation-info']['screenshots'][0]['image-url'];
+                // this.state.imageRootPath = `${process.env.PUBLIC_URL}/mockData/` + this.props.match.params.id + '/';
                 return true;
             } 
             return false;
