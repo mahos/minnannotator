@@ -5,6 +5,7 @@ import _ from 'lodash';
 import placeholderImage from '../images/image-placeholder.png';
 import { ReactComponent as CaretDown} from '../images/icons/caret-down.svg';
 import { ReactComponent as CommunityChecked} from '../images/icons/check-circle.svg';
+import { ReactComponent as InternetIcon} from '../images/icons/www.svg';
 
 // import languages from './random'
 const expertsData = require('./experts.json');
@@ -26,7 +27,7 @@ class ExpertListContent extends React.Component {
         super(props);
         this.state = {
             resultCount: Math.floor(Math.random() * 1000),
-            flagHover: false,
+            flagHover: false
         }
     }
     narrowData(region, options) {
@@ -48,8 +49,6 @@ class ExpertListContent extends React.Component {
         })
     }
 
-    
-    
     handleFlagMouseEnter() {
         console.log('flag mouseover activated!');
         this.setState({flagHover: true});
@@ -58,6 +57,8 @@ class ExpertListContent extends React.Component {
         console.log('flag mouse out activated!');
         this.setState({flagHover: false});
     }
+
+
     render() {
         this.narrowData(this.props.region, this.props.options)
         const flagCaptionStyle = {
@@ -89,10 +90,10 @@ class ExpertListContent extends React.Component {
                                     {/* <svg className="caret-down" width="20.911" height="11.859" viewBox="0 0 20.911 11.859"><path d="M20.3,12.891H2.2a1.406,1.406,0,0,0-.994,2.4l9.047,9.047a1.406,1.406,0,0,0,1.989,0l9.047-9.047A1.406,1.406,0,0,0,20.3,12.891Z" fill="#6e6e6e" opacity=".278" transform="translate(-0.794 -12.891)"/></svg> */}
                                 </div>
                                 <div className="images-zone">
-                                    <img className="main-image" alt={"image of " + expert['name']} src={placeholderImage} />
+                                    <img className="main-image" alt={"image of " + expert['name']} src={expert['images'][0] ?`${process.env.PUBLIC_URL}/mockData/${expert['id']}/${expert['images'][0]}` : placeholderImage} />
                                     <div>
-                                        <img className="sub-image" alt={"image of " + expert['name']} src={placeholderImage} />
-                                        <img className="sub-image"  alt={"image of " + expert['name']} src={placeholderImage} />
+                                        <img className="sub-image" alt={"image of " + expert['name']} src={expert['images'][1] ?`${process.env.PUBLIC_URL}/mockData/${expert['id']}/${expert['images'][1]}` : placeholderImage} />
+                                        <img className="sub-image"  alt={"image of " + expert['name']} src={expert['images'][2] ?`${process.env.PUBLIC_URL}/mockData/${expert['id']}/${expert['images'][2]}` : placeholderImage} />
                                     </div>
                                 </div>
                                 <div className="details-zone">
@@ -113,7 +114,7 @@ class ExpertListContent extends React.Component {
                                         </div>
                                     </div>
                                     <div className="website">
-                                        <span rol="img">🌐</span>{expert['website']}
+                                        <InternetIcon /><span><a>{expert['website']}</a></span>
                                     </div>
                                     <div className="website-languages">
                                         <h6>Website in</h6>

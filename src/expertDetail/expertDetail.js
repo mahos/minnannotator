@@ -118,7 +118,7 @@ class ExpertDetail extends React.Component {
                                 <h6>Add to Bookmark</h6><BookmarkIcon />
                             </div>
                             <div className="business-title">
-                                <h2>{this.state.expert&& this.state.expert['name']}</h2>{this.state.expert&& this.state.expert['reviewed']?<CommunityChecked className="community-badge" />: null}
+                                <h2>{this.state.expert&& this.state.expert['name']}</h2>{this.state.expert && this.state.expert['reviewed']?<CommunityChecked className="community-badge" />: null}
                             </div>
                             <div className="tags">
                                 {this.state.expert&& this.state.expert['tags'].map(tagItem => {
@@ -135,11 +135,11 @@ class ExpertDetail extends React.Component {
                             </div>
                             <div className="connect">
                                 <div className="website">
-                                    <InternetIcon className="icon www-icon" /><span>{this.state.expert&& this.state.expert['website']}</span>
+                                    <InternetIcon className="icon www-icon" /><span>{this.state.expert && this.state.expert['website']}</span>
                                 </div>
                                 <div className="phones">
-                                    <div><PhoneIcon className="icon phone-icon"/><span>{this.state.expert&& this.state.expert['fax']}</span></div>
-                                    <div><FaxIcon className="icon fax-icon"/><span>{this.state.expert&& this.state.expert['phone']}</span></div>
+                                    <div><PhoneIcon className="icon phone-icon"/><span>{this.state.expert && this.state.expert['fax']}</span></div>
+                                    <div><FaxIcon className="icon fax-icon"/><span>{this.state.expert && this.state.expert['phone']}</span></div>
                                 </div>
                             </div>
                             <div className="website-languages">

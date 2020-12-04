@@ -30,6 +30,7 @@ a:hover {
   color: #6F5D6C;
 }
 
+
 nav {
   width: 100%;
   display: flex;
@@ -41,11 +42,21 @@ nav {
   z-index: 500;
   background-color: rgba(255, 255, 255, 0.88)
 }
+
+.logo-area a {
+  display: flex;
+  align-items: center;
+}
+
+.logo-area a img {
+  width: 40px;
+  margin-right: 6px;
+}
 nav .logo-area,
 nav .logo-area * {
   font-family: 'Pangolin', cursive;
   text-decoration: none;
-  color: black;
+  color: #400B36;
   font-size: 1.9rem;
   margin-left: 24px;
 
@@ -76,7 +87,7 @@ nav .logo-area * {
   margin-right: 32px;
 }
 .nav-links ul a:hover,
-.nav-links ul.active {
+.nav-links ul a.active {
   border-bottom: 8px #400B36 solid;
 }
 nav .nav-right {
@@ -85,23 +96,35 @@ nav .nav-right {
 }
 
 nav .setup-options {
-  margin-right: 12px;
+  margin-right: 16px;
+}
+
+select.lang-select {
+  height: 34px;
+  padding-left: 8px;
+  /* width: 64px; */
+  /* border: none; */
+  border-radius: 2px;
 }
 nav .authentication {
   margin-right: 24px;
+}
+
+nav .authentication button {
+  width: 100px;
 }
 .content {
   padding-top: 64px; /* 64px min from navbar*/
 }
 footer {
   width: 100%;
-  /* border-top: 0.5px solid #400B36; */
+  border-top: 1px solid lightgray;
 }
 
 footer h6 {
   text-align: center;
   margin: 12px auto;
-  font-weight: 200;
+  font-weight: 400;
   color: #400B36;
 }
 /* 

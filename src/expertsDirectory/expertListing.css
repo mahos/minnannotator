@@ -107,8 +107,15 @@ img.sub-image:last-of-type {
     grid-auto-flow: column;
 }
 
-.website {
+.result-listing-area .website {
     margin-top: 24px;
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+.result-listing-area .website span {
+    margin-left: 4px;
+    cursor: pointer;
 }
 
 .flag-list {

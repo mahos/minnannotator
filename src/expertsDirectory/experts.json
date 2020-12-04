@@ -10,7 +10,7 @@
         "phone": "000-111-2222",
         "fax": "111-222-3333",
         "website-lang": ["ja", "en"],
-        "images": ["image1.png","image2.png", "image3.png"],
+        "images": [],
         "annotation-info": {
             "annotation-lang": ["en", "zho"],
             "annotators": [["User X", "2020-08-03T23:11:44Z", "en"], ["User Y", "2020-08-08T03;51:42Z", "zho"], ["User Z", "2020-11-03T19:09:22Z", "en"]],
@@ -70,7 +70,7 @@
         "website": "law-office2.com",
         
         "reviewed": true,
-        "votes": 32,
+        "votes": 52,
         "id": "000003",
         "phone": "000-111-2222",
         "fax": "111-222-3333",
@@ -92,6 +92,101 @@
                     "annotations": [],
                     "edit-history": [],
                     "image-url": ""
+                }
+            ]
+        }
+    },
+    {
+        "name": "xxxx law office",
+        "tags": ["law firm", "multi-lingual", "free consultation", "online consultation"],
+        "locations": ["Hokkaido", "Osaka", "Tokyo", "Online"],
+        "website": "xxxx-law-office.com",
+        "reviewed": true,
+        "votes": 30,
+        "id": "000004",
+        "phone": "000-111-2222",
+        "fax": "111-222-3333",
+        "website-lang": ["ja", "en"],
+        "images": [],
+        "annotation-info": {
+            "annotation-lang": ["en", "zho"],
+            "annotators": [["User X", "2020-08-03T23:11:44Z", "en"], ["User Y", "2020-08-08T03;51:42Z", "zho"], ["User Z", "2020-11-03T19:09:22Z", "en"]],
+            "history": [["User X", "2020-08-03T23:11:44Z", "annotated"], ["User Y", "2020-08-08T03;51:42Z", "annotated"], ["User Z", "2020-11-03T19:09:22Z", "voted up"], ["User B", "2020-11-09T07:03:11Z", "voted down annotation"], ["User A", "2020-11-04T09:09:22Z", "voted up annotation"]],
+            "screenshots": [{
+                    "title": "Annotation main page",
+                    "description": "Top page in Japanese",
+                    "annotations": [],
+                    "edit-history": [],
+                    "image-url": "desktop_main_1.png"
+                },{
+                    "title": "Annotation about us page",
+                    "description": "about us in Japanese",
+                    "annotations": [],
+                    "edit-history": [],
+                    "image-url": "mobile_main_1.png"
+                }
+            ]
+        }
+    },
+    {
+        "name": "xxxx law office",
+        "tags": ["law firm", "multi-lingual", "free consultation", "online consultation"],
+        "locations": ["Hokkaido", "Osaka", "Tokyo", "Online"],
+        "website": "xxxx-law-office.com",
+        "reviewed": true,
+        "votes": 49,
+        "id": "000005",
+        "phone": "000-111-2222",
+        "fax": "111-222-3333",
+        "website-lang": ["ja", "en"],
+        "images": [],
+        "annotation-info": {
+            "annotation-lang": ["en", "zho"],
+            "annotators": [["User X", "2020-08-03T23:11:44Z", "en"], ["User Y", "2020-08-08T03;51:42Z", "zho"], ["User Z", "2020-11-03T19:09:22Z", "en"]],
+            "history": [["User X", "2020-08-03T23:11:44Z", "annotated"], ["User Y", "2020-08-08T03;51:42Z", "annotated"], ["User Z", "2020-11-03T19:09:22Z", "voted up"], ["User B", "2020-11-09T07:03:11Z", "voted down annotation"], ["User A", "2020-11-04T09:09:22Z", "voted up annotation"]],
+            "screenshots": [{
+                    "title": "Annotation main page",
+                    "description": "Top page in Japanese",
+                    "annotations": [],
+                    "edit-history": [],
+                    "image-url": "desktop_main_1.png"
+                },{
+                    "title": "Annotation about us page",
+                    "description": "about us in Japanese",
+                    "annotations": [],
+                    "edit-history": [],
+                    "image-url": "mobile_main_1.png"
+                }
+            ]
+        }
+    },{
+        "name": "AKER Law Office",
+        "tags": ["law firm", "multi-lingual", "free consultation", "online consultation"],
+        "locations": ["Kyoto", "Online"],
+        "website": "aker-law-office.com",
+        "reviewed": true,
+        "votes": 16,
+        "id": "000006",
+        "phone": "080-3333-2222",
+        "fax": "080-221-3213",
+        "website-lang": ["ja", "en"],
+        "images": ["image1.png","image2.png", "image3.png"],
+        "annotation-info": {
+            "annotation-lang": ["en", "zho"],
+            "annotators": [["User X", "2020-08-03T23:11:44Z", "en"], ["User Y", "2020-08-08T03;51:42Z", "zho"], ["User Z", "2020-11-03T19:09:22Z", "en"]],
+            "history": [["User X", "2020-08-03T23:11:44Z", "annotated"], ["User Y", "2020-08-08T03;51:42Z", "annotated"], ["User Z", "2020-11-03T19:09:22Z", "voted up"], ["User B", "2020-11-09T07:03:11Z", "voted down annotation"], ["User A", "2020-11-04T09:09:22Z", "voted up annotation"]],
+            "screenshots": [{
+                    "title": "Annotation main page",
+                    "description": "Top page in Japanese",
+                    "annotations": [],
+                    "edit-history": [],
+                    "image-url": "desktop_main_1.png"
+                },{
+                    "title": "Annotation about us page",
+                    "description": "about us in Japanese",
+                    "annotations": [],
+                    "edit-history": [],
+                    "image-url": "mobile_main_1.png"
                 }
             ]
         }

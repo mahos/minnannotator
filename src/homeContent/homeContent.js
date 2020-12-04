@@ -134,7 +134,8 @@ class HomeContent extends React.Component {
                             {resourceData.slice(0,3).map((resource, index) => {
                                 return (<div className="resource-card">
                                     <div className="card-image-container">
-                                        <img src={`resourceIconImage${index+1}`} />
+                                        {index == 0 ? <img src={resourceIconImage1} /> : index ==1 ? <img src={resourceIconImage2} /> : <img src={resourceIconImage3} />}
+                                        {/* <img src={resourceIconImage2} /> */}
                                     </div>
                                     <div className="resource-info">
                                         <h3><div>{index + 1}</div>{resource['website']}</h3>

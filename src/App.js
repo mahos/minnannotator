@@ -4,6 +4,8 @@ import { Router } from 'react-router-dom';
 import history from './utilities/history';
 import Routes from './routes/index';
 
+import LogoImage from './images/logo.png';
+
 const langFlagData = require('./expertsDirectory/langFlagByCode.json')
 
 const availableLang = ['en', 'ja', 'zho', 'vi', 'ru', 'ko', 'si']
@@ -13,15 +15,18 @@ availableLang.forEach(lang => {
 })
 
 function App() {
+  let nowAt = window.location.href.split('/')[3]
+  console.log('now at: ', nowAt);
   return (
     <div className="App">
       <nav>
         <div className="logo-area">
-          <a href="/">Minnannotator</a>
+          
+          <a href="/"><img src={LogoImage} />Minnannotator</a>
         </div>
         <div className="nav-links">
           <ul>
-            <a href="./directory"><li>Look for Experts</li></a>
+            <a href="./directory" className={nowAt == 'directory'? 'active': ''}><li>Look for Experts</li></a>
             <a className="not-ready"><li >Forums</li></a>
             <a className="not-ready"><li>Resources</li></a>
           </ul>
