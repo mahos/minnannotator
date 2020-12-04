@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/minnannotator/static/css/main.b69e044d.chunk.css",
-    "main.js": "/minnannotator/static/js/main.177ece36.chunk.js",
-    "main.js.map": "/minnannotator/static/js/main.177ece36.chunk.js.map",
-    "runtime-main.js": "/minnannotator/static/js/runtime-main.6c2274b1.js",
-    "runtime-main.js.map": "/minnannotator/static/js/runtime-main.6c2274b1.js.map",
-    "static/js/2.08f33fa0.chunk.js": "/minnannotator/static/js/2.08f33fa0.chunk.js",
-    "static/js/2.08f33fa0.chunk.js.map": "/minnannotator/static/js/2.08f33fa0.chunk.js.map",
-    "static/js/3.b8f06339.chunk.js": "/minnannotator/static/js/3.b8f06339.chunk.js",
-    "static/js/3.b8f06339.chunk.js.map": "/minnannotator/static/js/3.b8f06339.chunk.js.map",
+    "main.js": "/minnannotator/static/js/main.06de1fc7.chunk.js",
+    "main.js.map": "/minnannotator/static/js/main.06de1fc7.chunk.js.map",
+    "runtime-main.js": "/minnannotator/static/js/runtime-main.2406d508.js",
+    "runtime-main.js.map": "/minnannotator/static/js/runtime-main.2406d508.js.map",
+    "static/js/2.0e07b786.chunk.js": "/minnannotator/static/js/2.0e07b786.chunk.js",
+    "static/js/2.0e07b786.chunk.js.map": "/minnannotator/static/js/2.0e07b786.chunk.js.map",
+    "static/js/3.e0602f51.chunk.js": "/minnannotator/static/js/3.e0602f51.chunk.js",
+    "static/js/3.e0602f51.chunk.js.map": "/minnannotator/static/js/3.e0602f51.chunk.js.map",
     "index.html": "/minnannotator/index.html",
     "static/css/main.b69e044d.chunk.css.map": "/minnannotator/static/css/main.b69e044d.chunk.css.map",
-    "static/js/2.08f33fa0.chunk.js.LICENSE.txt": "/minnannotator/static/js/2.08f33fa0.chunk.js.LICENSE.txt",
+    "static/js/2.0e07b786.chunk.js.LICENSE.txt": "/minnannotator/static/js/2.0e07b786.chunk.js.LICENSE.txt",
     "static/media/annotate.280fc3fc.svg": "/minnannotator/static/media/annotate.280fc3fc.svg",
     "static/media/arrow-back.953059bb.svg": "/minnannotator/static/media/arrow-back.953059bb.svg",
     "static/media/bookmark.b7f1258b.svg": "/minnannotator/static/media/bookmark.b7f1258b.svg",
@@ -35,9 +35,9 @@
     "static/media/www.c925e8ef.svg": "/minnannotator/static/media/www.c925e8ef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6c2274b1.js",
-    "static/js/2.08f33fa0.chunk.js",
+    "static/js/runtime-main.2406d508.js",
+    "static/js/2.0e07b786.chunk.js",
     "static/css/main.b69e044d.chunk.css",
-    "static/js/main.177ece36.chunk.js"
+    "static/js/main.06de1fc7.chunk.js"
   ]
 }
