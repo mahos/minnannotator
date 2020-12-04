@@ -207,7 +207,7 @@ class ExpertListContent extends React.Component {
                                     </div>
                                 </div>
                                 <div className="action-zone">
-                                    <a className="read-more-button" href={'/detail/' + expert['id']}><button className="primary">Go Read More</button></a>
+                                    <a className="read-more-button" href={'./detail/' + expert['id']}><button className="primary">Go Read More</button></a>
                                 </div>
                             </div>
                         )

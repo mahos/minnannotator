@@ -103,7 +103,7 @@ class ExpertDetail extends React.Component {
         return (
             <div className="expert-detail-content">
                 <div className="back-nav">
-                    <a href='/directory'><BackArrowIcon /><p>Back</p></a>
+                    <a href='../../directory'><BackArrowIcon /><p>Back</p></a>
                 </div>
                 { this.state.expert? (
                     <div className="expert-detail">

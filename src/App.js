@@ -22,7 +22,7 @@ function App() {
       <nav>
         <div className="logo-area">
           
-          <a href="/"><img src={LogoImage} />Minnannotator</a>
+          <a href="/minnannotator"><img src={LogoImage} />Minnannotator</a>
         </div>
         <div className="nav-links">
           <ul>
