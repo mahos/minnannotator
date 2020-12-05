@@ -180,7 +180,7 @@ class ExpertDetail extends React.Component {
                                 <h6>Review annotation available in</h6>
                                 <div className="flag-list"> 
                                     {
-                                        this.state.expert&& this.state.expert['annotation-info']['annotation-lang'].slice(0,3).map(annolang => {
+                                        this.state.expert && this.state.expert['annotation-info'] && this.state.expert['annotation-info']['annotation-lang'].slice(0,3).map(annolang => {
                                             if (langFlagData[annolang]['flagEmoji']){
                                                 return (
                                                     <div className="flag-icon">
@@ -202,7 +202,7 @@ class ExpertDetail extends React.Component {
                                             
                                         })
                                     }
-                                    {this.state.expert&& this.state.expert['annotation-info']['annotation-lang'].length > 3 ? 
+                                    {this.state.expert && this.state.expert['annotation-info'] && this.state.expert['annotation-info']['annotation-lang'].length > 3 ? 
                                     <div>
                                         <p className="remainder-lang">+{this.state.expert&& this.state.expert['annotation-info']['annotation-lang'].length - 3}</p> 
                                         <div className="other-flags">{this.state.expert&& this.state.expert['annotation-info']['annotation-lang'].slice(3).map(rest => {
@@ -232,17 +232,24 @@ class ExpertDetail extends React.Component {
                                 </div>
                             </div>
                             <div className="annotator-info">
-                                <div className="user-info">
-                                    <h6>Last annotated by {this.state.expert&& this.state.expert['annotation-info']['annotators'].slice(-1)[0][0]}</h6> {/* each annotator ["User Z", "2020-11-03T19:09:22GMT", "en"] */}
-                                    <span>{langFlagData[this.state.expert&& this.state.expert['annotation-info']['annotators'].slice(-1)[0][2]]['flagEmoji']? langFlagData[this.state.expert&& this.state.expert['annotation-info']['annotators'].slice(-1)[0][2]]['flag']: <img src={langFlagData[this.state.expert&& this.state.expert['annotation-info']['annotators'].slice(-1)[0][2]]['flag']}/>}</span>
+                                {this.state.expert && this.state.expert['annotation-info'] ? (
+                                <div>
+                                    <div className="user-info">
+                                        <h6>Last annotated by {this.state.expert&& this.state.expert['annotation-info']['annotators'].slice(-1)[0][0]}</h6> {/* each annotator ["User Z", "2020-11-03T19:09:22GMT", "en"] */}
+                                        <span>{langFlagData[this.state.expert&& this.state.expert['annotation-info']['annotators'].slice(-1)[0][2]]['flagEmoji']? langFlagData[this.state.expert&& this.state.expert['annotation-info']['annotators'].slice(-1)[0][2]]['flag']: <img src={langFlagData[this.state.expert&& this.state.expert['annotation-info']['annotators'].slice(-1)[0][2]]['flag']}/>}</span>
+                                    </div>
+                                    <h6>On {new Date(this.state.expert && this.state.expert['annotation-info']['annotators'].slice(-1)[0][1]).toDateString()}</h6>
                                 </div>
-                                <h6>On {new Date(this.state.expert&& this.state.expert['annotation-info']['annotators'].slice(-1)[0][1]).toDateString()}</h6>
+                                ) : (
+                                    <p>Unfortunately, annotation information is unavailable at the moment.</p>
+                                )}
                             </div>
                         </div>
                     </div>
                 ) : (
                     <h3>Oops, looks like we don't have data on this particular business!</h3>
                 )}
+                {this.state.expert && this.state.expert['annotation-info'] ? (
                 <div className="annotation-zone">
                     <div className="annotation-edit-tools">
                         <div className="anno-lang-option">
@@ -274,11 +281,11 @@ class ExpertDetail extends React.Component {
                         </div>
                     </div>
                     <div className="document">
-                        {this.state.expert && this.state.expert['annotation-info']['screenshots'].length > 0 ? 
+                        {this.state.expert && this.state.expert['annotation-info'] && this.state.expert['annotation-info']['screenshots'].length > 0 ? 
                         // <img className="annotated" src={this.state.currentlyViewing}/> 
                         <div>
                             {/* <LoadedScreenshot source={this.state.currentlyViewing} /> */}
-                            <img className="annotated" src={`${this.state.currentlyViewing}`} />
+                            <img className="annotated" src={this.state.expert['annotation-info']['screenshots'][0]['image-url']? `${this.state.currentlyViewing}`: placeholderImage} />
                         </div>
                         : <p>looks like nobody submitted an annotation for this business! Be the first to do so!</p>}
                     </div>
@@ -286,7 +293,7 @@ class ExpertDetail extends React.Component {
                     <div className="annotation-more-info">
                         <div className="participant-history">
                             <h4>Participant History</h4>
-                                {this.state.expert ? this.state.expert['annotation-info']['history'].map(user => {
+                                {this.state.expert && this.state.expert['annotation-info'] ? this.state.expert['annotation-info']['history'].map(user => {
                                     return (
                                         <div className="annotator-info">
                                             <div className="annotator-action"><img src={placeholderImage}/>{user[0]} {user[2]} on this expert</div>
@@ -309,7 +316,7 @@ class ExpertDetail extends React.Component {
                                 }): ''}
                         </div>
                     </div>
-                </div>
+                </div>) : (<p>Looks like we don't have an annotation yet for this legal professional.</p>)}
             </div>
             
         )
