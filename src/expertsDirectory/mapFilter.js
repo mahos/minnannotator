@@ -1,6 +1,8 @@
 import React from 'react';
 import './mapFilter.css'
 
+import { ReactComponent as JapanMap } from '../images/japanMap.svg';
+
 const japanRegions = require('./japanRegions.json')
 
 class MapView extends React.Component {
@@ -34,13 +36,25 @@ class MapView extends React.Component {
             )
         })
 
+        let styleCSS = `
+            #${this.props.clickedPrefecture} {
+                fill: #606;
+                opacity: 1;
+            }
+            #${this.props.hoveredRegion+'Overlay'} {
+                stroke: #606;
+            }
+        `
+
         return (
             <div className="japan-map">
-                {japanMap}
+                <style>{styleCSS}</style>
+                <JapanMap />
             </div>
         )
     }
 }
+
 
 class RegionSelector extends React.Component {
     constructor(props) {

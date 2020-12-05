@@ -3,9 +3,11 @@
     margin-top: 32px;
 }
 
+
 .japan-map {
     margin-top: 100px;
     width: 40%;
+    margin-right: 5%;
 }
 
 .region-map {
@@ -22,17 +24,17 @@ label.region-caption {
     flex-wrap: wrap;
 }
 
-.prefecture-area.selected {
+/* .prefecture-area.selected {
     border: 2px solid #400B36;
-}
+} */
 .prefecture-map {
     border: 2px solid gray;
     padding: 8px 10px;
     display: flex;
 }
-.prefecture-map.selected {
+/* .prefecture-map.selected {
     background-color: #400B36;
-}
+} */
 label.prefecture-caption {
     font-size: 0.7em;
     color: gray;
