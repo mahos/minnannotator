@@ -84,7 +84,7 @@ class RegionSelector extends React.Component {
 
         const fullList = regionOrder.map(region => {
             return (
-                <div className="region" onMouseOver={(event) => {this.handleRegionHover(event, Object.keys(region)[0])}}>
+                <li className="region" onMouseOver={(event) => {this.handleRegionHover(event, Object.keys(region)[0])}}>
                     <h4 className="region-title">{Object.values(region)[0]}</h4>
                     <ul className="prefecture-listing">
                         {japanRegions[Object.keys(region)[0]].map(prefecture => {
@@ -95,7 +95,7 @@ class RegionSelector extends React.Component {
                             )
                         })}
                     </ul>
-                </div>
+                </li>
             )
         })
         // console.log('fullList: ', fullList)
@@ -103,9 +103,9 @@ class RegionSelector extends React.Component {
         return (
             <div className="region-text-panel">
                 <h2>Look for legal professional by region</h2>
-                <div className="region-full-list">
+                <ul className="region-full-list">
                     {fullList}
-                </div>
+                </ul>
             </div>
         )
     }
