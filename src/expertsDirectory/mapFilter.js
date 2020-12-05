@@ -102,7 +102,7 @@ class RegionSelector extends React.Component {
 
         return (
             <div className="region-text-panel">
-                <h2>Look for legal professional by region</h2>
+                <h2>Look for legal professionals by region</h2>
                 <ul className="region-full-list">
                     {fullList}
                 </ul>

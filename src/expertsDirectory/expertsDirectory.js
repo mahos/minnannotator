@@ -9,9 +9,10 @@ class ExpertsDirectory extends React.Component {
     constructor(props) {
         super(props);
         this.handleRegionSelection = this.handleRegionSelection.bind(this)
+        this.handleOptionSelection = this.handleOptionSelection.bind(this)
         this.state = {
             region: 'All Regions',
-            options: []
+            options: {}
         }
     }
 
@@ -24,6 +25,11 @@ class ExpertsDirectory extends React.Component {
         }
         
     }
+
+    handleOptionSelection(checks) {
+        console.log('handleOptionSelection ran!!', checks);
+        this.setState({options: checks});
+    }
     render() {
         console.log('selected state: ', this.state.region)
         return (
@@ -31,7 +37,7 @@ class ExpertsDirectory extends React.Component {
                 <MapFilter onRegionSelection={this.handleRegionSelection} selectedPref={this.state.region}/>
                 <div className="directory-bottom">
                     <div className="filter-container">
-                        <FilterForm />
+                        <FilterForm onFilterApply={this.handleOptionSelection}/>
                     </div>
 
                     <ExpertListContent region={this.state.region} options={this.state.options}/>

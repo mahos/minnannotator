@@ -14,8 +14,8 @@ const langFlagData = require('./langFlagByCode.json')
 
 
 console.log('expertsData: ', expertsData);
-const voteOrderedData = _.sortBy(expertsData, ['votes']).reverse();
-console.log('voteOrderedData: ', voteOrderedData)
+let orderedData = _.sortBy(expertsData, ['votes']).reverse();
+console.log('orderedData: ', orderedData)
 
 console.log('languages and flag data: ', langFlagData)
 
@@ -26,27 +26,154 @@ class ExpertListContent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            resultCount: Math.floor(Math.random() * 1000),
+            orderedDataState: [],
             flagHover: false
-        }
+        };
+        this.sortData = this.sortData.bind(this);
     }
     narrowData(region, options) {
         filteredData = [];
         console.log('narrowing down region data - ', region)
-        if (region == 'All Regions' && options.length == 0) {
-            filteredData = voteOrderedData;
+        console.log('options.length: ', Object.entries(options).length)
+        if (region == 'All Regions' && Object.entries(options).length === 0) {
+            filteredData = orderedData;
             return;
-        }
-        voteOrderedData.forEach(data => {
-            if (data['locations'].includes(region)) {
-                filteredData.push(data);
-            } 
+        } else if (region == "All Regions" && Object.entries(options).length) {
+            console.log('all regions, restricted options')
+            orderedData.forEach(data => {
+                
+                let reqTracker = [];
+                Object.entries(options).forEach(reqOption => {
+                    // console.log('going around options: ', reqOption);
+                    if (reqOption[0] === "general") {
+                        reqOption[1].forEach(generalReq => {
+                            switch(generalReq) {
+                                case "Community reviewed":
+                                    data["reviewed"] ? reqTracker.push(true) : reqTracker.push(false);
+                                    break;
+                                case "Has website":
+                                    data["website"] && data["website"] !== '' ? reqTracker.push(true) : reqTracker.push(false);
+                                    break;
+                                case "Multi-lingual":
+                                    data["languages"].length > 1 ? reqTracker.push(true) : reqTracker.push(false);
+                                    break;
+                                case "More than 50 upvotes":
+                                    data["votes"] > 49 ? reqTracker.push(true) : reqTracker.push(false);
+                                    break;
+                                case "Offers free consultation":
+                                    data["tags"].includes("free consultation") ? reqTracker.push(true) : reqTracker.push(false);
+                                    break;
+                                case "Translator available":
+                                    data["tags"].includes("translator available") ? reqTracker.push(true) : reqTracker.push(false);
+                                    break;
+                                case "Online consultation available":
+                                    data["tags"].includes("online consultation") ? reqTracker.push(true) : reqTracker.push(false);
+                                    break;
+                            }
+                            
+                        })
+                    } else {
+                        let includesAll = []
+                        console.log('reqOption[1]', reqOption[1])
+                        reqOption[1].forEach(item => {
+                            console.log('item: ', item);
+                            console.log('data[reqOption[0]]: ', data[reqOption[0]])
+                            data[reqOption[0]].includes(item) ? includesAll.push(true) : includesAll.push(false)
+                        })
+                        console.log('includesAll: ', includesAll)
+                        if (includesAll.every(i => i)) {
+                            console.log('cleared', reqOption[0], ' requirements of ', reqOption[1])
+                        } else {
+                            console.log('did not pass ', reqOption[0], ' req of ', reqOption[1])
+                        }
+                        reqTracker.push(includesAll.every(i => i))
+                        
+                    }
 
-            options.forEach(reqOption => {
-                console.log('going around options: ', reqOption);
+                })
+                console.log('reqTracker: ', reqTracker)
+                if (reqTracker && reqTracker.every(i => i)) {
+                    console.log('business passes requirement of filter - adding to list...')
+                    filteredData.push(data);
+                }
+                
             })
-            
-        })
+            return;
+        } else if (region !== 'All Regions' && Object.entries(options).length === 0) {
+            console.log('restricted regions, no options');
+            orderedData.forEach(data => {
+                console.log('data: ', data)
+                if (data['locations'].includes(region)) {
+                    filteredData.push(data);
+                } 
+            })
+            return;
+        } else {
+            console.log('restricted regions, restricted options')
+            orderedData.forEach(data => {
+                let reqTracker = [];
+                // console.log('data: ', data)
+                if (data['locations'].includes(region)) {
+                    reqTracker.push(true);
+                } 
+                
+                Object.entries(options).forEach(reqOption => {
+                    // console.log('going around options: ', reqOption);
+                    if (reqOption[0] === "general") {
+                        reqOption[1].forEach(generalReq => {
+                            switch(generalReq) {
+                                case "Community reviewed":
+                                    data["reviewed"] ? reqTracker.push(true) : reqTracker.push(false);
+                                    break;
+                                case "Has website":
+                                    data["website"] && data["website"] !== '' ? reqTracker.push(true) : reqTracker.push(false);
+                                    break;
+                                case "Multi-lingual":
+                                    data["languages"].length > 1 ? reqTracker.push(true) : reqTracker.push(false);
+                                    break;
+                                case "More than 50 upvotes":
+                                    data["votes"] > 49 ? reqTracker.push(true) : reqTracker.push(false);
+                                    break;
+                                case "Offers free consultation":
+                                    data["tags"].includes("free consultation") ? reqTracker.push(true) : reqTracker.push(false);
+                                    break;
+                                case "Translator available":
+                                    data["tags"].includes("translator available") ? reqTracker.push(true) : reqTracker.push(false);
+                                    break;
+                                case "Online consultation available":
+                                    data["tags"].includes("online consultation") ? reqTracker.push(true) : reqTracker.push(false);
+                                    break;
+                            }
+                            
+                        })
+                    } else {
+                        let includesAll = []
+                        console.log('reqOption[1]', reqOption[1])
+                        reqOption[1].forEach(item => {
+                            console.log('item: ', item);
+                            console.log('data[reqOption[0]]: ', data[reqOption[0]])
+                            data[reqOption[0]].includes(item) ? includesAll.push(true) : includesAll.push(false)
+                        })
+                        console.log('includesAll: ', includesAll)
+                        if (includesAll.every(i => i)) {
+                            console.log('cleared', reqOption[0], ' requirements of ', reqOption[1])
+                        } else {
+                            console.log('did not pass ', reqOption[0], ' req of ', reqOption[1])
+                        }
+                        reqTracker.push(includesAll.every(i => i))
+                        
+                    }
+
+                })
+                console.log('reqTracker: ', reqTracker)
+                if (reqTracker && reqTracker.every(i => i)) {
+                    console.log('business passes requirement of filter - adding to list...')
+                    filteredData.push(data);
+                }
+                
+            })
+        }
+        
     }
 
     handleFlagMouseEnter() {
@@ -56,6 +183,23 @@ class ExpertListContent extends React.Component {
     handleFlagMouseExit() {
         console.log('flag mouse out activated!');
         this.setState({flagHover: false});
+    }
+
+    sortData(event) {
+        console.log('sorting data - ', event.target.value)
+        if (event.target.value === 'A-Z') {
+            let reOrdered =  _.sortBy(expertsData, ['name', 'votes']);
+            console.log('reOrderd: ', reOrdered);
+            // this.setState({orderedDataState: reOrdered});
+            // this.setState({testState: 'testing'});
+            orderedData = reOrdered;
+        } else if (event.target.value === 'Z-A') {
+            // this.setState({orderedDataState: _.sortBy(expertsData, ['name', 'votes']).reverse()});
+            orderedData = _.sortBy(expertsData, ['name', 'votes']).reverse();
+        } else {
+            // this.setState({orderedDataState: _.sortBy(expertsData, ['votes'])})
+            orderedData = _.sortBy(expertsData, ['votes']);
+        }
     }
 
 
@@ -70,10 +214,10 @@ class ExpertListContent extends React.Component {
                     <label className="result-count">{filteredData.length} results</label>
                     <div className="sorter">
                         <label>Sort by: 
-                            <select>
-                                <option>Votes</option>
-                                <option>Alphabetical (A-Z)</option>
-                                <option>Alphabetical (Z-A)</option>
+                            <select onChange={this.sortData}>
+                                <option value="votes">Votes</option>
+                                <option value="A-Z">Alphabetical (A-Z)</option>
+                                <option value="Z-A">Alphabetical (Z-A)</option>
                             </select>
                         </label>
                     </div>
