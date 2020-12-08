@@ -8,8 +8,8 @@ import { ReactComponent as CaretDown} from '../images/icons/caret-down.svg';
 import { ReactComponent as CaretUp} from '../images/icons/caret-up.svg';
 import { ReactComponent as EyeHideIcon} from '../images/icons/eye-hide.svg';
 import { ReactComponent as EyeShowIcon} from '../images/icons/eye-show.svg';
-import { ReactComponent as BookmarkIcon} from '../images/icons/bookmark.svg';
-import { ReactComponent as AnnotateIcon} from '../images/icons/annotate.svg';
+import { ReactComponent as BookmarkIcon} from '../images/icons/bookmark2.svg';
+import { ReactComponent as AnnotateIcon} from '../images/icons/annotate2.svg';
 import { ReactComponent as CommunityChecked} from '../images/icons/check-circle.svg';
 import { ReactComponent as InternetIcon} from '../images/icons/www.svg';
 import { ReactComponent as PhoneIcon} from '../images/icons/phone.svg';
@@ -122,7 +122,7 @@ class ExpertDetail extends React.Component {
                         </div>
                         <div className="details-zone">
                             <div className="bookmark-area">
-                                <h6>Add to Bookmark</h6><BookmarkIcon />
+                                <h6>Add to Bookmark</h6><BookmarkIcon className="bookmarkIcon"/>
                             </div>
                             <div className="business-title">
                                 <h2>{this.state.expert&& this.state.expert['name']}</h2>{this.state.expert && this.state.expert['reviewed']?<CommunityChecked className="community-badge" />: null}

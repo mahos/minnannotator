@@ -34,6 +34,10 @@ h6 {
     display: flex;
 }
 
+.expert-detail .bookmarkIcon {
+    color: gray;
+}
+
 .votes-zone {
     width: 12%;
     display: flex;
