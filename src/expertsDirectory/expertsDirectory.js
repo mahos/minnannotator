@@ -16,6 +16,7 @@ class ExpertsDirectory extends React.Component {
         }
     }
 
+
     handleRegionSelection(region) {
         console.log('handleRegionSelection Ran!!!!!');
         if (region == 'All Regions') {
@@ -29,6 +30,12 @@ class ExpertsDirectory extends React.Component {
     handleOptionSelection(checks) {
         console.log('handleOptionSelection ran!!', checks);
         this.setState({options: checks});
+    }
+    componentDidMount() {
+        this.props.nowShowing(true);
+    }
+    componentWillUnmount() {
+        this.props.nowShowing(false);
     }
     render() {
         console.log('selected state: ', this.state.region)

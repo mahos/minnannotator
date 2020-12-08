@@ -50,7 +50,7 @@ function App() {
           <Routes />
         </Router> */}
         <BrowserRouter basename="/minnannotator">
-          <Routes />
+          <Routes onShowDir={()=>{nowAt='directory'}}/>
         </BrowserRouter>
       </div>
       <footer>

@@ -214,9 +214,6 @@ class ExpertListContent extends React.Component {
             orderedData = reOrdered;
         }
     }
-    componentDidMount() {
-        // this.narrowData(this.props.region, this.props.options)
-    }
 
     render() {
         this.narrowData(this.props.region, this.props.options)
