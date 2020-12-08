@@ -78,9 +78,9 @@ class RegionSelector extends React.Component {
     
     render() {
         const selectedPrefecture = this.props.clickedPrefecture;
-        const regionOrder = [{'Misc': 'Nationwide'}, {'Hokkaido': 'Hokkaido'}, {'Kanto': 'Kanto Region'}, 
-        {'Kansai': 'Kansai Region'}, {'Shikoku': 'Shikoku'}, {'Tohoku': 'Tohoku Region'}, {'Chubu': 'Chubu Region'}, 
-        {'Chugoku': 'Chugoku Region'}, {'Kyushu': 'Kyushu'}, {'Okinawa': 'Okinawa'}]
+        const regionOrder = [{'Misc': 'Nationwide'}, {'Chubu': 'Chubu Region'}, {'Kansai': 'Kansai Region'}, {'Chugoku': 'Chugoku Region'},
+        {'Kyushu': 'Kyushu'}, {'Hokkaido': 'Hokkaido'}, {'Tohoku': 'Tohoku Region'},  {'Kanto': 'Kanto Region'}, 
+         {'Shikoku': 'Shikoku'}, {'Okinawa': 'Okinawa'}]
 
         const fullList = regionOrder.map(region => {
             return (
