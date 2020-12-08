@@ -75,6 +75,10 @@ ul.prefecture-listing {
     column-count: 2;
 }
 
+li.prefecture-name {
+    cursor: pointer;
+}
+
 li.prefecture-name.selected div{
     background-color:#6F5D6C;
     color: white;

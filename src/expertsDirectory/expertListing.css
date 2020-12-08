@@ -57,10 +57,14 @@ h6 {
 .images-zone img.main-image {
     width: 100%;
     margin-bottom: 4%;
+    height: 220px;
+    object-fit: cover;
 }
 
 .images-zone img.sub-image {
     width: 48%;
+    height: 100%;
+    object-fit: cover;
 }
 img.sub-image:first-of-type {
     margin-right: 2%;
@@ -115,6 +119,7 @@ img.sub-image:last-of-type {
 
 .result-listing-area .website span {
     margin-left: 4px;
+    margin-top: -2px;
     cursor: pointer;
 }
 
@@ -173,6 +178,6 @@ img.sub-image:last-of-type {
     width: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
 
 }

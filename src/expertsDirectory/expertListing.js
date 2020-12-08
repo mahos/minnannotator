@@ -8,7 +8,8 @@ import { ReactComponent as CommunityChecked} from '../images/icons/check-circle.
 import { ReactComponent as InternetIcon} from '../images/icons/www.svg';
 
 // import languages from './random'
-const expertsData = require('./experts.json');
+const expertsData_old = require('./experts.json');
+const expertsData = require('./fakeExperts.json');
 const langFlagData = require('./langFlagByCode.json')
 // const icons = require('../images/icons/caret-down.svg');
 
@@ -234,9 +235,9 @@ class ExpertListContent extends React.Component {
                                     {/* <svg className="caret-down" width="20.911" height="11.859" viewBox="0 0 20.911 11.859"><path d="M20.3,12.891H2.2a1.406,1.406,0,0,0-.994,2.4l9.047,9.047a1.406,1.406,0,0,0,1.989,0l9.047-9.047A1.406,1.406,0,0,0,20.3,12.891Z" fill="#6e6e6e" opacity=".278" transform="translate(-0.794 -12.891)"/></svg> */}
                                 </div>
                                 <div className="images-zone">
-                                    <img className="main-image" alt={"image of " + expert['name']} src={expert['images'][0] ?`${process.env.PUBLIC_URL}/mockData/${expert['id']}/${expert['images'][0]}` : placeholderImage} />
+                                    <img className="main-image" alt={"image of " + expert['name']} src={expert['images'][0] ?`${process.env.PUBLIC_URL}/mockData/${expert['id']}/${expert['images'][1]}` : placeholderImage} />
                                     <div>
-                                        <img className="sub-image" alt={"image of " + expert['name']} src={expert['images'][1] ?`${process.env.PUBLIC_URL}/mockData/${expert['id']}/${expert['images'][1]}` : placeholderImage} />
+                                        <img className="sub-image" alt={"image of " + expert['name']} src={expert['images'][1] ?`${process.env.PUBLIC_URL}/mockData/${expert['id']}/${expert['images'][0]}` : placeholderImage} />
                                         <img className="sub-image"  alt={"image of " + expert['name']} src={expert['images'][2] ?`${process.env.PUBLIC_URL}/mockData/${expert['id']}/${expert['images'][2]}` : placeholderImage} />
                                     </div>
                                 </div>
@@ -258,25 +259,124 @@ class ExpertListContent extends React.Component {
                                         </div>
                                     </div>
                                     <div className="website">
-                                        <InternetIcon /><span><a>{expert['website']}</a></span>
+                                        { expert['website'].length > 0 ?
+                                        <div><InternetIcon /><span><a>{expert['website']}</a></span></div> 
+                                        : <h6>No website available</h6> }
                                     </div>
-                                    <div className="website-languages">
-                                        <h6>Website in</h6>
+                                    { expert['website'].length > 0 ?
+                                        <div className="website-languages">
+                                            <h6>Website in</h6>
+                                            <div className="flag-list">{
+                                                expert['website-lang'].map(weblang => {
+                                                    if (langFlagData[weblang]['flagEmoji']){
+                                                        return (
+                                                            <div className="flag-icon">
+                                                                <p onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)}>{langFlagData[weblang]['flag']}</p>
+                                                                <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[weblang]['langName']}</figcaption>
+                                                            </div>
+                                                            
+                                                        )
+                                                    } else {
+                                                        return (
+                                                            <div className="flag-icon">
+                                                                <img onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)} src={langFlagData[weblang]['flag']} />
+                                                                <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[weblang]['langName']}</figcaption>
+                                                                
+                                                            </div>
+                                                            
+                                                        )
+                                                    }
+                                                    
+                                                })
+                                            }
+                                            </div>
+                                        </div>
+                                    : <div><br /><br /></div> }
+                                    {expert['annotation-info']['history'].length > 0 ? 
+                                    <div>
+                                        <div className="annotation-languages">
+                                            <h6>Review annotation available in</h6>
+                                            <div className="flag-list"> 
+                                                {
+                                                    expert['annotation-info']['annotation-lang'].slice(0,3).map(annolang => {
+                                                        if (langFlagData[annolang]['flagEmoji']){
+                                                            return (
+                                                                <div className="flag-icon">
+                                                                    <p onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)}>{langFlagData[annolang]['flag']}</p>
+                                                                    <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[annolang]['langName']}</figcaption>
+                                                                </div>
+                                                                
+                                                            )
+                                                        } else {
+                                                            return (
+                                                                <div className="flag-icon">
+                                                                    <img onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)} src={langFlagData[annolang]['flag']} />
+                                                                    <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[annolang]['langName']}</figcaption>
+                                                                    
+                                                                </div>
+                                                                
+                                                            )
+                                                        }
+                                                        
+                                                    })
+                                                }
+                                                {expert['annotation-info']['annotation-lang'].length > 3 ? 
+                                                <div>
+                                                    <p className="remainder-lang">+{expert['annotation-info']['annotation-lang'].length - 3}</p> 
+                                                    <div className="other-flags">{expert['annotation-info']['annotation-lang'].slice(3).map(rest => {
+                                                    
+                                                        if (langFlagData[rest]['flagEmoji']){
+                                                            return (
+                                                                <div className="flag-icon small">
+                                                                    <p onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)}>{langFlagData[rest]['flag']}</p>
+                                                                    <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[rest]['langName']}</figcaption>
+                                                                </div>
+                                                                
+                                                            )
+                                                        } else {
+                                                            return (
+                                                                <div className="flag-icon small">
+                                                                    <img onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)} src={langFlagData[rest]['flag']} />
+                                                                    <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[rest]['langName']}</figcaption>
+                                                                    
+                                                                </div>
+                                                                
+                                                            )
+                                                        }
+                                                        
+                                                    })}</div>
+                                                </div>
+                                                : null}
+                                            </div>
+                                        </div>
+                                        <div className="annotator-info">
+                                            <div className="user-info">
+                                                <h6>Last annotated by {expert['annotation-info']['annotators'].slice(-1)[0][0]}</h6> {/* each annotator ["User Z", "2020-11-03T19:09:22GMT", "en"] */}
+                                                <span>{langFlagData[expert['annotation-info']['annotators'].slice(-1)[0][2]]['flagEmoji']? langFlagData[expert['annotation-info']['annotators'].slice(-1)[0][2]]['flag']: <img src={langFlagData[expert['annotation-info']['annotators'].slice(-1)[0][2]]['flag']}/>}</span>
+                                            </div>
+                                            <h6>On {new Date(expert['annotation-info']['annotators'].slice(-1)[0][1]).toDateString()}</h6>
+                                        </div>
+                                    </div>
+                                    : <h6>No one has annotated this professional yet</h6>}
+                                </div>
+                                <div className="action-zone">
+                                    <div className="expert-languages">
+                                        <h6>Service available in</h6>
                                         <div className="flag-list">{
-                                            expert['website-lang'].map(weblang => {
-                                                if (langFlagData[weblang]['flagEmoji']){
+                                            expert['languages'].map(explang => {
+                                                if (langFlagData[explang]['flagEmoji']){
                                                     return (
                                                         <div className="flag-icon">
-                                                            <p onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)}>{langFlagData[weblang]['flag']}</p>
-                                                            <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[weblang]['langName']}</figcaption>
+                                                            <p onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)}>{langFlagData[explang]['flag']}</p>
+                                                            <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[explang]['langName']}</figcaption>
                                                         </div>
                                                         
                                                     )
                                                 } else {
                                                     return (
                                                         <div className="flag-icon">
-                                                            <img onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)} src={langFlagData[weblang]['flag']} />
-                                                            <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[weblang]['langName']}</figcaption>
+                                                            <img onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)} src={langFlagData[explang]['flag']} />
+                                                            <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[explang]['langName']}</figcaption>
                                                             
                                                         </div>
                                                         
@@ -287,70 +387,6 @@ class ExpertListContent extends React.Component {
                                         }
                                         </div>
                                     </div>
-                                    <div className="annotation-languages">
-                                        <h6>Review annotation available in</h6>
-                                        <div className="flag-list"> 
-                                            {
-                                                expert['annotation-info']['annotation-lang'].slice(0,3).map(annolang => {
-                                                    if (langFlagData[annolang]['flagEmoji']){
-                                                        return (
-                                                            <div className="flag-icon">
-                                                                <p onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)}>{langFlagData[annolang]['flag']}</p>
-                                                                <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[annolang]['langName']}</figcaption>
-                                                            </div>
-                                                            
-                                                        )
-                                                    } else {
-                                                        return (
-                                                            <div className="flag-icon">
-                                                                <img onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)} src={langFlagData[annolang]['flag']} />
-                                                                <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[annolang]['langName']}</figcaption>
-                                                                
-                                                            </div>
-                                                            
-                                                        )
-                                                    }
-                                                    
-                                                })
-                                            }
-                                            {expert['annotation-info']['annotation-lang'].length > 3 ? 
-                                            <div>
-                                                <p className="remainder-lang">+{expert['annotation-info']['annotation-lang'].length - 3}</p> 
-                                                <div className="other-flags">{expert['annotation-info']['annotation-lang'].slice(3).map(rest => {
-                                                
-                                                    if (langFlagData[rest]['flagEmoji']){
-                                                        return (
-                                                            <div className="flag-icon small">
-                                                                <p onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)}>{langFlagData[rest]['flag']}</p>
-                                                                <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[rest]['langName']}</figcaption>
-                                                            </div>
-                                                            
-                                                        )
-                                                    } else {
-                                                        return (
-                                                            <div className="flag-icon small">
-                                                                <img onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)} src={langFlagData[rest]['flag']} />
-                                                                <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[rest]['langName']}</figcaption>
-                                                                
-                                                            </div>
-                                                            
-                                                        )
-                                                    }
-                                                    
-                                                })}</div>
-                                            </div>
-                                            : null}
-                                        </div>
-                                    </div>
-                                    <div className="annotator-info">
-                                        <div className="user-info">
-                                            <h6>Last annotated by {expert['annotation-info']['annotators'].slice(-1)[0][0]}</h6> {/* each annotator ["User Z", "2020-11-03T19:09:22GMT", "en"] */}
-                                            <span>{langFlagData[expert['annotation-info']['annotators'].slice(-1)[0][2]]['flagEmoji']? langFlagData[expert['annotation-info']['annotators'].slice(-1)[0][2]]['flag']: <img src={langFlagData[expert['annotation-info']['annotators'].slice(-1)[0][2]]['flag']}/>}</span>
-                                        </div>
-                                        <h6>On {new Date(expert['annotation-info']['annotators'].slice(-1)[0][1]).toDateString()}</h6>
-                                    </div>
-                                </div>
-                                <div className="action-zone">
                                     <a className="read-more-button" href={'./detail/' + expert['id']}><button className="primary">Go Read More</button></a>
                                 </div>
                             </div>

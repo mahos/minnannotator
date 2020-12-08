@@ -69,6 +69,9 @@ h6 {
 
 .images-zone img.sub-image {
     width: 48%;
+    height: 100%;
+    object-fit: cover;
+
 }
 img.sub-image:first-of-type {
     margin-right: 2%;
@@ -128,7 +131,7 @@ img.sub-image:last-of-type {
     align-items: flex-start;
 }
 
-.website {
+.website div {
     margin-top: 0;
     display: flex;
     align-items: center;
