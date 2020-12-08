@@ -28,7 +28,9 @@ class ExpertListContent extends React.Component {
         super(props);
         this.state = {
             orderedDataState: [],
-            flagHover: false
+            flagHover: false,
+            flagHoverDict: {},
+            hoverLang: ''
         };
         this.sortData = this.sortData.bind(this);
     }
@@ -177,45 +179,53 @@ class ExpertListContent extends React.Component {
         
     }
 
-    handleFlagMouseEnter() {
+    handleFlagMouseEnter(lang) {
         console.log('flag mouseover activated!');
-        this.setState({flagHover: true});
+        console.log('this: ', this)
+        console.log('lang in: ', lang)
+        this.setState({[`flagHoverDict${lang}`]: true,
+                        'hoverLang': lang});
     }
-    handleFlagMouseExit() {
+    handleFlagMouseExit(lang) {
         console.log('flag mouse out activated!');
-        this.setState({flagHover: false});
+        console.log('lang out: ', lang)
+        this.setState({flagHover: false, 'hoverLang': ''});
     }
 
     sortData(event) {
         console.log('sorting data - ', event.target.value)
         if (event.target.value === 'A-Z') {
             let reOrdered =  _.sortBy(expertsData, ['name', 'votes']);
-            console.log('reOrderd: ', reOrdered);
-            // this.setState({orderedDataState: reOrdered});
+            console.log('reOrderd1: ', reOrdered);
+            this.setState({orderedDataState: reOrdered});
             // this.setState({testState: 'testing'});
             orderedData = reOrdered;
         } else if (event.target.value === 'Z-A') {
-            // this.setState({orderedDataState: _.sortBy(expertsData, ['name', 'votes']).reverse()});
-            orderedData = _.sortBy(expertsData, ['name', 'votes']).reverse();
+            let reOrdered = _.sortBy(expertsData, ['name', 'votes']).reverse();
+            this.setState({orderedDataState: reOrdered});
+            console.log('reOrderd2: ', reOrdered);
+            orderedData = reOrdered;
         } else {
-            // this.setState({orderedDataState: _.sortBy(expertsData, ['votes'])})
-            orderedData = _.sortBy(expertsData, ['votes']);
+            let reOrdered = _.sortBy(expertsData, ['votes', 'name']).reverse();
+            this.setState({orderedDataState: reOrdered})
+            console.log('reOrderd3: ', reOrdered);
+            orderedData = reOrdered;
         }
     }
-
+    componentDidMount() {
+        // this.narrowData(this.props.region, this.props.options)
+    }
 
     render() {
         this.narrowData(this.props.region, this.props.options)
-        const flagCaptionStyle = {
-            display: this.state.flagHover ? 'block': 'none'
-        }
+  
         return (
             <div className="filter-result-content">
                 <div className="result-stat-area">
                     <label className="result-count">{filteredData.length} results</label>
                     <div className="sorter">
                         <label>Sort by: 
-                            <select onChange={this.sortData}>
+                            <select onChange={(event)=>this.sortData(event)}>
                                 <option value="votes">Votes</option>
                                 <option value="A-Z">Alphabetical (A-Z)</option>
                                 <option value="Z-A">Alphabetical (Z-A)</option>
@@ -271,16 +281,20 @@ class ExpertListContent extends React.Component {
                                                     if (langFlagData[weblang]['flagEmoji']){
                                                         return (
                                                             <div className="flag-icon">
-                                                                <p onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)}>{langFlagData[weblang]['flag']}</p>
-                                                                <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[weblang]['langName']}</figcaption>
+                                                                <p onMouseOver={()=>this.handleFlagMouseEnter(langFlagData[weblang]['langName'])} onMouseOut={()=>this.handleFlagMouseExit(langFlagData[weblang]['langName'])}>{langFlagData[weblang]['flag']}</p>
+                                                                {langFlagData[weblang]['langName']===this.state.hoverLang ? 
+                                                                        <figcaption style={{display: 'block', 'z-index': '900'}} className="subcaption">{langFlagData[weblang]['langName']}</figcaption>
+                                                                    :   <figcaption style={{display: 'none'}} className="subcaption">{langFlagData[weblang]['langName']}</figcaption>}
                                                             </div>
                                                             
                                                         )
                                                     } else {
                                                         return (
                                                             <div className="flag-icon">
-                                                                <img onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)} src={langFlagData[weblang]['flag']} />
-                                                                <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[weblang]['langName']}</figcaption>
+                                                                <img onMouseOver={()=>this.handleFlagMouseEnter(langFlagData[weblang]['langName'])} onMouseOut={()=>this.handleFlagMouseExit(langFlagData[weblang]['langName'])} src={langFlagData[weblang]['flag']} />
+                                                                {langFlagData[weblang]['langName']===this.state.hoverLang ? 
+                                                                        <figcaption style={{display: 'block', 'z-index': '900'}} className="subcaption">{langFlagData[weblang]['langName']}</figcaption>
+                                                                    :   <figcaption style={{display: 'none'}} className="subcaption">{langFlagData[weblang]['langName']}</figcaption>}
                                                                 
                                                             </div>
                                                             
@@ -302,16 +316,20 @@ class ExpertListContent extends React.Component {
                                                         if (langFlagData[annolang]['flagEmoji']){
                                                             return (
                                                                 <div className="flag-icon">
-                                                                    <p onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)}>{langFlagData[annolang]['flag']}</p>
-                                                                    <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[annolang]['langName']}</figcaption>
+                                                                    <p onMouseOver={()=>this.handleFlagMouseEnter(langFlagData[annolang]['langName'])} onMouseOut={()=>this.handleFlagMouseExit(langFlagData[annolang]['langName'])}>{langFlagData[annolang]['flag']}</p>
+                                                                    {langFlagData[annolang]['langName']===this.state.hoverLang ? 
+                                                                        <figcaption style={{display: 'block', 'z-index': '900'}} className="subcaption">{langFlagData[annolang]['langName']}</figcaption>
+                                                                    :   <figcaption style={{display: 'none'}} className="subcaption">{langFlagData[annolang]['langName']}</figcaption>}
                                                                 </div>
                                                                 
                                                             )
                                                         } else {
                                                             return (
                                                                 <div className="flag-icon">
-                                                                    <img onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)} src={langFlagData[annolang]['flag']} />
-                                                                    <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[annolang]['langName']}</figcaption>
+                                                                    <img onMouseOver={()=>this.handleFlagMouseEnter(langFlagData[annolang]['langName'])} onMouseOut={()=>this.handleFlagMouseExit(langFlagData[annolang]['langName'])} src={langFlagData[annolang]['flag']} />
+                                                                    {langFlagData[annolang]['langName']===this.state.hoverLang ? 
+                                                                        <figcaption style={{display: 'block', 'z-index': '900'}} className="subcaption">{langFlagData[annolang]['langName']}</figcaption>
+                                                                    :   <figcaption style={{display: 'none'}} className="subcaption">{langFlagData[annolang]['langName']}</figcaption>}
                                                                     
                                                                 </div>
                                                                 
@@ -328,16 +346,20 @@ class ExpertListContent extends React.Component {
                                                         if (langFlagData[rest]['flagEmoji']){
                                                             return (
                                                                 <div className="flag-icon small">
-                                                                    <p onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)}>{langFlagData[rest]['flag']}</p>
-                                                                    <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[rest]['langName']}</figcaption>
+                                                                    <p onMouseOver={()=>this.handleFlagMouseEnter(langFlagData[rest]['langName'])} onMouseOut={()=>this.handleFlagMouseExit(langFlagData[rest]['langName'])}>{langFlagData[rest]['flag']}</p>
+                                                                    {langFlagData[rest]['langName']===this.state.hoverLang ? 
+                                                                        <figcaption style={{display: 'block', 'z-index': '900'}} className="subcaption">{langFlagData[rest]['langName']}</figcaption>
+                                                                    :   <figcaption style={{display: 'none'}} className="subcaption">{langFlagData[rest]['langName']}</figcaption>}
                                                                 </div>
                                                                 
                                                             )
                                                         } else {
                                                             return (
                                                                 <div className="flag-icon small">
-                                                                    <img onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)} src={langFlagData[rest]['flag']} />
-                                                                    <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[rest]['langName']}</figcaption>
+                                                                    <img onMouseOver={()=>this.handleFlagMouseEnter(langFlagData[rest]['langName'])} onMouseOut={()=>this.handleFlagMouseExit(langFlagData[rest]['langName'])} src={langFlagData[rest]['flag']} />
+                                                                    {langFlagData[rest]['langName']===this.state.hoverLang ? 
+                                                                        <figcaption style={{display: 'block', 'z-index': '900'}} className="subcaption">{langFlagData[rest]['langName']}</figcaption>
+                                                                    :   <figcaption style={{display: 'none'}} className="subcaption">{langFlagData[rest]['langName']}</figcaption>}
                                                                     
                                                                 </div>
                                                                 
@@ -367,16 +389,20 @@ class ExpertListContent extends React.Component {
                                                 if (langFlagData[explang]['flagEmoji']){
                                                     return (
                                                         <div className="flag-icon">
-                                                            <p onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)}>{langFlagData[explang]['flag']}</p>
-                                                            <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[explang]['langName']}</figcaption>
+                                                            <p onMouseOver={() => this.handleFlagMouseEnter(langFlagData[explang]['langName'])} onMouseOut={() => this.handleFlagMouseExit(langFlagData[explang]['langName'])}>{langFlagData[explang]['flag']}</p>
+                                                            {langFlagData[explang]['langName']===this.state.hoverLang ? 
+                                                                <figcaption style={{display: 'block', 'z-index': '900'}} className="subcaption">{langFlagData[explang]['langName']}</figcaption>
+                                                            :   <figcaption style={{display: 'none'}} className="subcaption">{langFlagData[explang]['langName']}</figcaption>}
                                                         </div>
                                                         
                                                     )
                                                 } else {
                                                     return (
                                                         <div className="flag-icon">
-                                                            <img onMouseOver={this.handleFlagMouseEnter.bind(this)} onMouseOut={this.handleFlagMouseExit.bind(this)} src={langFlagData[explang]['flag']} />
-                                                            <figcaption style={flagCaptionStyle} className="subcaption">{langFlagData[explang]['langName']}</figcaption>
+                                                            <img onMouseOver={() => this.handleFlagMouseEnter(langFlagData[explang]['langName'])} onMouseOut={() => this.handleFlagMouseExit(langFlagData[explang]['langName'])} src={langFlagData[explang]['flag']} />
+                                                            {langFlagData[explang]['langName']===this.state.hoverLang ? 
+                                                                <figcaption style={{display: 'block', 'z-index': '900'}} className="subcaption">{langFlagData[explang]['langName']}</figcaption>
+                                                            :   <figcaption style={{display: 'none'}} className="subcaption">{langFlagData[explang]['langName']}</figcaption>}
                                                             
                                                         </div>
                                                         
