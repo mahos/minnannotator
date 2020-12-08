@@ -22347,7 +22347,7 @@
         ],
         "website": "",
         "reviewed": false,
-        "votes": 599,
+        "votes": 598,
         "id": "000374",
         "phone": "614-775-7822",
         "fax": "154-272-1121",
@@ -101587,7 +101587,7 @@
     },
     {
         "name": "AKER Law Office",
-        "tags": ["law firm", "free consultation", "online consultation"],
+        "tags": ["online consultation", "free consultation", "law firm"],
         "locations": ["Kyoto", "Online"],
         "service-type": ["Attorney"],
         "specialty": ["Arbitration and Mediation",

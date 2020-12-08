@@ -105,7 +105,7 @@ class ExpertListContent extends React.Component {
         } else if (region !== 'All Regions' && Object.entries(options).length === 0) {
             console.log('restricted regions, no options');
             orderedData.forEach(data => {
-                console.log('data: ', data)
+                // console.log('data: ', data)
                 if (data['locations'].includes(region)) {
                     filteredData.push(data);
                 } 
@@ -118,7 +118,9 @@ class ExpertListContent extends React.Component {
                 // console.log('data: ', data)
                 if (data['locations'].includes(region)) {
                     reqTracker.push(true);
-                } 
+                } else {
+                    reqTracker.push(false);
+                }
                 
                 Object.entries(options).forEach(reqOption => {
                     // console.log('going around options: ', reqOption);
@@ -159,18 +161,18 @@ class ExpertListContent extends React.Component {
                         })
                         console.log('includesAll: ', includesAll)
                         if (includesAll.every(i => i)) {
-                            console.log('cleared', reqOption[0], ' requirements of ', reqOption[1])
+                            // console.log('cleared', reqOption[0], ' requirements of ', reqOption[1])
                         } else {
-                            console.log('did not pass ', reqOption[0], ' req of ', reqOption[1])
+                            // console.log('did not pass ', reqOption[0], ' req of ', reqOption[1])
                         }
                         reqTracker.push(includesAll.every(i => i))
                         
                     }
 
                 })
-                console.log('reqTracker: ', reqTracker)
+                // console.log('reqTracker: ', reqTracker)
                 if (reqTracker && reqTracker.every(i => i)) {
-                    console.log('business passes requirement of filter - adding to list...')
+                    // console.log('business passes requirement of filter - adding to list...')
                     filteredData.push(data);
                 }
                 
