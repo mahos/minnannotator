@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/minnannotator/static/css/main.9a6dfab3.chunk.css",
-    "main.js": "/minnannotator/static/js/main.7139846f.chunk.js",
-    "main.js.map": "/minnannotator/static/js/main.7139846f.chunk.js.map",
-    "runtime-main.js": "/minnannotator/static/js/runtime-main.2406d508.js",
-    "runtime-main.js.map": "/minnannotator/static/js/runtime-main.2406d508.js.map",
-    "static/js/2.1b405cd8.chunk.js": "/minnannotator/static/js/2.1b405cd8.chunk.js",
-    "static/js/2.1b405cd8.chunk.js.map": "/minnannotator/static/js/2.1b405cd8.chunk.js.map",
-    "static/js/3.e0602f51.chunk.js": "/minnannotator/static/js/3.e0602f51.chunk.js",
-    "static/js/3.e0602f51.chunk.js.map": "/minnannotator/static/js/3.e0602f51.chunk.js.map",
+    "main.css": "/minnannotator/static/css/main.4f54cfde.chunk.css",
+    "main.js": "/minnannotator/static/js/main.861ff4be.chunk.js",
+    "main.js.map": "/minnannotator/static/js/main.861ff4be.chunk.js.map",
+    "runtime-main.js": "/minnannotator/static/js/runtime-main.10c5a490.js",
+    "runtime-main.js.map": "/minnannotator/static/js/runtime-main.10c5a490.js.map",
+    "static/js/2.cf86146e.chunk.js": "/minnannotator/static/js/2.cf86146e.chunk.js",
+    "static/js/2.cf86146e.chunk.js.map": "/minnannotator/static/js/2.cf86146e.chunk.js.map",
+    "static/js/3.61b55b63.chunk.js": "/minnannotator/static/js/3.61b55b63.chunk.js",
+    "static/js/3.61b55b63.chunk.js.map": "/minnannotator/static/js/3.61b55b63.chunk.js.map",
     "index.html": "/minnannotator/index.html",
-    "static/css/main.9a6dfab3.chunk.css.map": "/minnannotator/static/css/main.9a6dfab3.chunk.css.map",
-    "static/js/2.1b405cd8.chunk.js.LICENSE.txt": "/minnannotator/static/js/2.1b405cd8.chunk.js.LICENSE.txt",
+    "static/css/main.4f54cfde.chunk.css.map": "/minnannotator/static/css/main.4f54cfde.chunk.css.map",
+    "static/js/2.cf86146e.chunk.js.LICENSE.txt": "/minnannotator/static/js/2.cf86146e.chunk.js.LICENSE.txt",
     "static/media/annotate.280fc3fc.svg": "/minnannotator/static/media/annotate.280fc3fc.svg",
     "static/media/arrow-back.953059bb.svg": "/minnannotator/static/media/arrow-back.953059bb.svg",
     "static/media/bookmark.b7f1258b.svg": "/minnannotator/static/media/bookmark.b7f1258b.svg",
@@ -36,9 +36,9 @@
     "static/media/www.c925e8ef.svg": "/minnannotator/static/media/www.c925e8ef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2406d508.js",
-    "static/js/2.1b405cd8.chunk.js",
-    "static/css/main.9a6dfab3.chunk.css",
-    "static/js/main.7139846f.chunk.js"
+    "static/js/runtime-main.10c5a490.js",
+    "static/js/2.cf86146e.chunk.js",
+    "static/css/main.4f54cfde.chunk.css",
+    "static/js/main.861ff4be.chunk.js"
   ]
 }
