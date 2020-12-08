@@ -24,7 +24,7 @@ const langFlagData = require('../expertsDirectory/langFlagByCode.json');
 const resourceData = require('./resources.json');
 const forumTopicData = require('./forumTopic.json');
 const keywordsData = require('./keywords.json');
-const experts = require('../expertsDirectory/experts.json');
+const experts = require('../expertsDirectory/fakeExperts.json');
 
 
 const annotated = experts[experts.length - 1]; // needs to actually check if annotation exists and compare the time of last user annotation
@@ -191,6 +191,7 @@ class HomeContent extends React.Component {
                     </div>
                     <div className="recently-annotated-panel panel">
                         <h2 className="panel-title">Recently Annotated</h2>
+                        <a href={'./detail/' + annotated['id']}>
                         <div className="annotated-card">
                             <div className="card-image-container">
                                 <img src={placeholderImage} />
@@ -216,6 +217,7 @@ class HomeContent extends React.Component {
                                 })}
                             </div>
                         </div>
+                        </a>
                         <a href="#">More</a>
                     </div>
                     <div className="popular-keywords-panel panel">
